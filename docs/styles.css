@@ -1,0 +1,92 @@
+
+#programokMenu {
+  width: 150px;
+  z-index: 1;
+  overflow-x: hidden;
+  padding: 8px 8px;
+  margin: 10px 0px 0px 2px;
+  position: absolute;
+}
+  
+#programokMenuButton {
+  padding: 0px 8px 9px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  margin: 5px;
+  text-align: center;
+}
+  
+#programokMenuButton img {
+  position: relative;
+  top: 7px;
+  left: -10px;
+}
+
+#programokButton {
+  margin: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 5px;
+  text-decoration: none;
+}
+
+  #programokButton img {
+    max-width: 16px;
+    max-height: 16px;
+    position: relative;
+    top: 2px;
+    left: -2px;
+  }
+  
+  #header {
+    background: rgb(0, 95, 95);
+    padding: 30px;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #navbar {
+    overflow: hidden;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  #navbar a.active {
+    background-color: #1a0094;
+    color: white;
+  }
+  
+  .content {
+    overflow-y: scroll;
+    position: fixed;
+    top: 232px;
+    left: 187px;
+    right: 10px;
+    bottom: 26px;
+    padding-right: 10px;
+  }
+  
+  a {
+      color: #2d49eb;
+  }
+  
+  a:hover {
+      color: #5b70eb;
+  }
+  
+  a:active {
+      color: #2d49eb;
+  }
