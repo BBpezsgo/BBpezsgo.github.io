@@ -1,262 +1,707 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
-    <title>Page Title</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Innen letöltheted a programokat amiket készítettem.">
+    <title>BB - Projectek</title>
+
     <meta name="author" content="BB">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Nothing játék, Webböngésző, Ultimate Program, stb.">
+    <meta name="revised detail" content="2022. 03. 27">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BB Projectek">
+    <meta property="og:description" content="Nothing játék, Webböngésző, Ultimate Program, stb.">
+    <meta property="og:url" content="https://bbpezsgo.github.io/allmyprograms.github.io/">
+    <meta property="og:image" content="https://bbpezsgo.github.io/allmyprograms.github.io/icons/ico1.png">
+    <meta data-react-helmet="true" name="theme-color" content="#0d6efd">
+    <meta property="og:site_name" content="BB Projectek">
+    <meta name="twitter:card" content="https://bbpezsgo.github.io/allmyprograms.github.io/icons/ico1.png">
+    <meta name="twitter:site" content="@discord">
+    <meta name="twitter:creator" content="@User0057#0057">
+
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d70969805a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="icon" type="image/x-icon"
-        href="https://raw.githubusercontent.com/BBpezsgo/allmyprograms.github.io/main/docs/icons/favico.ico">
     <link rel="icon" href="./icons/ico0.png" sizes="16x16">
-    <title>
-        Programok
-    </title>
+
+    <!-- Disable context menu -->
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
-        function Download() {
-            window.open("https://onedrive.live.com/redir.aspx?cid=6aeb0da011c539bf&resid=6AEB0DA011C539BF!354&parId=6AEB0DA011C539BF!362&authkey=!AHHviMAHSFAXhaY");
+    </script>
+
+    <!-- Disable select -->
+    <script>
+        //form tags to omit in NS6+:
+        var omitformtags = ["input", "textarea", "select"]
+        omitformtags = omitformtags.join("|")
+        function disableselect(e) {
+            if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+                return false
+        }
+        function reEnable() {
+            return true
+        }
+        if (typeof document.onselectstart != "undefined")
+            document.onselectstart = new Function("return false")
+        else {
+            document.onmousedown = disableselect
+            document.onmouseup = reEnable
         }
     </script>
-    <style>
-    </style>
+    <script>
+        try {
+            var pageTracker = _gat._getTracker("UA-549331-28");
+            pageTracker._trackPageview();
+        } catch (err) {
+
+        }
+    </script>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="330" class="bg-secondary" onload="OnLoad()">
 
-    <div class="navbar">
-        <a href="https://discord.gg/Uz4p3K88GJ" target="_blank">Discord szerverem</a>
-        <a href="mailto:bazsi5fel@gmail.com">E-mail</a>
+    <!-- Skip nav button -->
+    <a href="#main-content" class="skip-nav-link text-light">Skip navigation</a>
+
+    <!-- Header -->
+    <div class="bg-primary text-white text-center header">
+        <h1>Bánszky Balázs</h1>
+        <p>Projectek</p>
     </div>
 
-    <div class="row">
-        <div class="side">
-            <a id="programokMenuButton" href="#programNothing" class="btn"><img src="programs/nothing.png">Nothing</a>
-            <a id="programokMenuButton" href="#programWeb" class="btn"><img src="programs/browser.png">Webböngésző</a>
-            <a id="programokMenuButton" href="#programNet" class="btn"><img src="programs/network.png">Internet</a>
-            <a id="programokMenuButton" href="#programImgSlicer" class="btn"><img src="programs/blank.png">Image Slicer</a>
-            <a id="programokMenuButton" href="#resourcepacks" class="btn">Minecraft Resource Pack-ok</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top"
+        style="z-index: 1; box-shadow: #000 0px 0px 10px;">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img class="rounded-circle mx-1" style="height: 40px;"
+                    src="./ProfilPicture.png" alt="Profil picture">BB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nothing">Nothing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#webbrowser">Webböngésző</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ultimateprogram">Ultimate Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#imageslicer">Image Slicer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mcpacks">Minecraft resource pack-ok</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="main">
-            <div class="card" id="programNothing">
-                <div class="card-header">Nothing
-                    <div class="popup" onclick="myFunction(6)"><img src="InfoButton.png">
-                        <span class="popuptext" id="myPopup6">
-                            <img src="LastModified.png"><b>Utoljára módosítva:</b>
-                            <div style="padding-left: 20px;">2021. május 6.</div>
-                        </span>
-                    </div>
-                </div>
-                <div class="card-body">Egy stragégiai játék, ahol lehet építkezni és egységeket gyártani.<br>Van lehetőség
-                    többjátékos módra is.<br><br>
-                    <img src="warn.png"><b> Megfelelő internetkapcsolat kell a program futtatásához.</b><br>
-                    <img src="warn.png"><b> A program nagyobb fájlokat tölt le, és telepít.</b><br><br>
-                    <a id="programokButton" class="btn" href="https://bbpezsgo.github.io/nothing.github.io/"
-                        target="_blank">
-                        <img src="web.png">
-                        Weboldal</a>
+    </nav>
+
+    <!-- Main -->
+    <div id="main-content" class="container mt-5">
+
+        <!-- Nothing -->
+        <div id="nothing" class="container bg-dark text-white py-2 reveal container-background" style="
+            background-image: linear-gradient(#0005,  var(--bs-dark)), url(nothing-background.png);
+            background-size: 256px;
+            ">
+            <h1><img src="programs/nothing.png" class="program-icon" alt="Nothing icon">Nothing</h1>
+            <p>
+                Egy stragégiai játék, ahol lehet építkezni és egységeket gyártani.
+                Van lehetőség többjátékos módra is.
+            </p>
+            <div style="margin-bottom: 20px;">
+                <h4>Nothing<span style="font-size: small;" class="badge bg-secondary">v1</span></h4>
+                <ul>
+                    <li>Elkezdtem: 2020. április 22-én</li>
+                    <li>Utoljára módosítva: 2020. április 22-én</li>
+                </ul>
+                <p>
+                    Ezeket használtam:
+                </p>
+                <ul class="horizontal-list">
+                    <li>
+                        <a target="_blank" href="https://gamemakerblog.com/2009/12/22/game-maker-8-0-released/"
+                            data-bs-toggle="tooltip" title="Game Maker 8">
+                            <img src="used-programs/gamemaker8.png" class="used-program-icon" alt="Game maker 8 icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.gimp.org/" data-bs-toggle="tooltip" title="Gimp 2">
+                            <img src="used-programs/gimp.png" class="used-program-icon" alt="Gimp 2 icon">
+                        </a>
+                    </li>
+                </ul>
+                <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
+                    class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+            </div>
+            <div>
+                <h4>Nothing<span style="font-size: small;" class="badge bg-secondary">v2</span></h4>
+                <ul>
+                    <li>Elkezdtem: 2021. február 1-én</li>
+                    <li>Utoljára módosítva: 2020. április 22-én</li>
+                </ul>
+                <p>
+                    Ezeket használtam:
+                </p>
+                <ul class="horizontal-list">
+                    <li>
+                        <a target="_blank" href="https://unity.com/" data-bs-toggle="tooltip" title="Unity">
+                            <img src="used-programs/unity.png" class="used-program-icon" alt="Unity icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-toggle="tooltip"
+                            title="Visual Studio 2022">
+                            <img src="used-programs/visualstudio2022.png" class="used-program-icon" alt="VS 2022 icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.axialis.com/icongenerator/" data-bs-toggle="tooltip"
+                            title="Axialis icon generator">
+                            <img src="used-programs/axialis.png" class="used-program-icon" alt="Axialis icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.gimp.org/" data-bs-toggle="tooltip" title="Gimp 2">
+                            <img src="used-programs/gimp.png" class="used-program-icon" alt="Gimp 2 icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.photonengine.com/pun" data-bs-toggle="tooltip"
+                            title="Photon PUN">
+                            <img src="used-programs/photon.png" class="used-program-icon" alt="Photon icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://firebase.google.com/" data-bs-toggle="tooltip"
+                            title="Firebase">
+                            <img src="used-programs/firebase.png" class="used-program-icon" alt="Firebase icon">
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    API-k és SDK-k:
+                </p>
+                <ul class="horizontal-list">
+                    <li>
+                        <a target="_blank" href="https://trello.com" data-bs-toggle="tooltip" title="Trello API">
+                            <img src="used-programs/trello.png" class="used-program-icon" alt="Trello icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://discord.com/developers/docs/game-sdk/sdk-starter-guide"
+                            data-bs-toggle="tooltip" title="Discord game SDK">
+                            <img src="used-programs/discord.png" class="used-program-icon" alt="Discord icon">
+                        </a>
+                    </li>
+                </ul>
+                <div style="height: 20px;"></div>
+                <ul>
+                    <li>
+                        <i class="fas fa-info-circle text-secondary"></i> Megfelelő internetkapcsolat kell a
+                        program futtatásához
+                    </li>
+                    <li>
+                        <i class="fas fa-info-circle text-secondary"></i> A program nagyobb fájlokat tölt le és
+                        telepít
+                    </li>
+                </ul>
+                <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
+                    class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+                <a target="_blank" href="https://bbpezsgo.github.io/nothing.github.io/"
+                    class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weboldal</a>
+            </div>
+        </div>
+
+        <!-- Webbrowser -->
+        <div id="webbrowser" class="container bg-dark text-white py-2 mt-5 reveal">
+            <h1><img src="programs/browser.png" class="program-icon" alt="Webbrowser icon">Webböngésző</h1>
+            <p>
+                Egy rossz webböngésző, ami másra nem jó mint a neve. Vannak beállítások, egyszerű és
+                alap mód, előzmények, kedvencek.
+            </p>
+            <ul>
+                <li>Elkezdtem: 2020. április 22-én</li>
+                <li>Utoljára módosítva: 2021. június 29-én</li>
+            </ul>
+            <p>
+                Ezeket használtam:
+            </p>
+            <ul class="horizontal-list">
+                <li>
+                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-toggle="tooltip"
+                        title="Visual Studio 2022">
+                        <img src="used-programs/visualstudio2022.png" class="used-program-icon" alt="VS 2022 icon">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.axialis.com/icongenerator/" data-bs-toggle="tooltip"
+                        title="Axialis icon generator">
+                        <img src="used-programs/axialis.png" class="used-program-icon" alt="Axialis icon">
+                    </a>
+                </li>
+            </ul>
+            <div style="height: 20px;"></div>
+            <ul>
+                <li>
+                    <i class="fas fa-info-circle text-secondary"></i> Kissebb fájlokat hoz létre az AppData mappában, és
+                    a program mellé.
+                </li>
+            </ul>
+            <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212450&authkey=AAHhouwZBqqkLPg"
+                class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+        </div>
+
+        <!-- Ultimate program -->
+        <div id="ultimateprogram" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
+            background-image: linear-gradient(#0005,  var(--bs-dark)), url(https://img.freepik.com/free-photo/digital-technology-network-data-communication-concept-abstract-background-earth-element-furnished-by-nasa_24070-631.jpg);
+            background-size:cover;
+            background-position: center;
+            ">
+            <h1><img src="programs/network.png" class="program-icon" alt="Ultimate program icon">Ultimate Program</h1>
+            <p>
+                Ez egy komplexebb program a többinél.<br>
+                Kilistázza az összes elérhető hálózati
+                adaptert, megmutatja az aktuális internet státuszokat.
+            </p>
+            <p>
+                Ha egy adaptert kiválasztunk, kilistázza az
+                összes megtalálható IP címet, és típus szerint csoportosítja. Az IP címek hostnevüket automatikusan
+                betölti, majd elmenti. Megmutatja az adapter attribútumait, sebességét, nevét, azonosítóját, és a
+                leírását.
+            </p>
+            <p>
+                Egy másik fülön megmutatja a csomag-forgalmat az adapteren. Megjeleníti a küldőt, fogadót,
+                a kapcsolat típusát, és a csomag tartalmát. Mível sok csomag érkezik másodpercenként, van optimalizáló,
+                ami kikapcsolja a csomagok listázását, amikor nem látható, de ez kikapcsolható. Ha egy csomag többször
+                érkezik meg, azt összeolvasztja, és egy számmal jelzi, hogy gány csomagot olvasztott össze. A forgalmat
+                egy grafikonon is megtekinthetjük. A csomagok küldő és fogadó IP címeket összegyűjti, és hozzáadja az
+                előző oldal IP cím listájához, ahol kezelhetjük ezeket. Ha egy IP címet kiválasztunk, akkor van
+                lehetőség a cím pingelésére, és a részletek megtekintésére, ahol le lehet kérdezni a host helyét, a host
+                részletesebb nevét, ki lehet listázni az elérhető portokat, majd rá lehet csatlakozni egyre, és
+                küldhetünk, vagy fogadhatunk üzeneteket.
+            </p>
+            <ul>
+                <li>Elkezdtem: 2021. április 6-án</li>
+                <li>Utoljára módosítva: 2021. június 29-én</li>
+            </ul>
+            <p>
+                Ezeket használtam:
+            </p>
+            <ul class="horizontal-list">
+                <li>
+                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-toggle="tooltip"
+                        title="Visual Studio 2022">
+                        <img src="used-programs/visualstudio2022.png" class="used-program-icon" alt="VS 2022 icon">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.axialis.com/icongenerator/" data-bs-toggle="tooltip"
+                        title="Axialis icon generator">
+                        <img src="used-programs/axialis.png" class="used-program-icon" alt="Axialis icon">
+                    </a>
+                </li>
+            </ul>
+            <div style="height: 20px;"></div>
+            <ul>
+                <li>
+                    <i class="fas fa-exclamation-triangle text-warning"></i> Rendszergazdai jogosultság szükséges a
+                    program futtatásához!
+                </li>
+                <li>
+                    <i class="fas fa-info-circle text-secondary"></i> Megfelelő internetkapcsolat kell a program
+                    futtatásához.
+                </li>
+                <li>
+                    <i class="fas fa-info-circle text-secondary"></i> Kissebb fájlokat hoz létre és tölt le a program
+                    mellé.
+                </li>
+            </ul>
+            <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212451&authkey=AFzYV0LKRZtbX9k"
+                class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+        </div>
+
+        <!-- Image slicer -->
+        <div id="imageslicer" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
+            background-image: linear-gradient(#0005,  var(--bs-dark)), url(https://wallpaperaccess.com/full/1558939.jpg);
+            background-size:cover;
+            background-position: center;
+            ">
+            <h1><img src="programs/blank.png" class="program-icon" alt="Image slicer icon">Image slicer</h1>
+            <p>
+                Ez a program szét tudja szeletelni a megadott képet, majd el lehet menteni egyessével egy mappába.
+            </p>
+            <ul>
+                <li>Elkezdtem: 2021. április 6-án</li>
+                <li>Utoljára módosítva: 2021. június 29-én</li>
+            </ul>
+            <p>
+                Ezeket használtam:
+            </p>
+            <ul class="horizontal-list">
+                <li>
+                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-toggle="tooltip"
+                        title="Visual Studio 2022">
+                        <img src="used-programs/visualstudio2022.png" class="used-program-icon" alt="VS 2022 icon">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.axialis.com/icongenerator/" data-bs-toggle="tooltip"
+                        title="Axialis icon generator">
+                        <img src="used-programs/axialis.png" class="used-program-icon" alt="Axialis icon">
+                    </a>
+                </li>
+            </ul>
+            <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212455&authkey=AMBglOd0g4X_DqY"
+                class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+        </div>
+
+        <!-- MC packs -->
+        <div id="mcpacks" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
+            background-size: 32px;
+            background-image: linear-gradient(#0005,  var(--bs-dark)), url(mc-background.png);
+            ">
+            <h1>Minecraft resource pack-ok</h1>
+            <p>
+                Ezeket használtam:
+            </p>
+            <ul class="horizontal-list">
+                <li>
+                    <a target="_blank" href="https://www.gimp.org/" data-bs-toggle="tooltip" title="Gimp 2">
+                        <img src="used-programs/gimp.png" class="used-program-icon" alt="Gimp 2 icon">
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    1.0
+                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212456&authkey=ADiIpQzipc5pSSQ"
+                        class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
+                        Letöltés</a>
+                </li>
+                <li style="margin-top: 5px;">
+                    1.12
+                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212459&authkey=AEIQnGxv3lZOiuY"
+                        class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
+                        Letöltés</a>
+                    <ul class="horizontal-list inline">
+                        <li>
+                            <a target="_blank" href="https://optifine.net/home" data-bs-toggle="tooltip"
+                                title="OptiFine">
+                                <img src="./mc-mod-optifine.jpg" class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/buildcraft"
+                                data-bs-toggle="tooltip" title="Buildcraft">
+                                <img src="https://media.forgecdn.net/attachments/thumbnails/10/160/310/172/hMKXF.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/clay-soldiers-mod"
+                                data-bs-toggle="tooltip" title="Claysoliders">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/14/119/64/64/635585834883219154.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/immersive-engineering"
+                                data-bs-toggle="tooltip" title="Immersive Engineering">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/20/135/64/64/635707329671959611.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/tinkers-construct"
+                                data-bs-toggle="tooltip" title="Tinkers Construct">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/488/295/64/64/637792495945179503.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://www.curseforge.com/minecraft/mc-mods/weather-storms-tornadoes"
+                                data-bs-toggle="tooltip" title="Weather 2">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/28/290/64/64/635825047725414178.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/bwm-suite"
+                                data-bs-toggle="tooltip" title="Better With Mods">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/43/923/64/64/636026377394543052.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/appleskin"
+                                data-bs-toggle="tooltip" title="Appleskin">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/47/527/64/64/636066936394500688.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/abyssalcraft"
+                                data-bs-toggle="tooltip" title="AbyssalCraft">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/54/432/64/64/636135140666602633.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="margin-top: 5px;">
+                    1.16
+                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212458&authkey=AJYyfL1qiRtFbMI"
+                        class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
+                        Letöltés</a>
+                    <ul class="horizontal-list inline">
+                        <li>
+                            <a target="_blank" href="https://optifine.net/home" data-bs-toggle="tooltip"
+                                title="OptiFine">
+                                <img src="./mc-mod-optifine.jpg" class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/create"
+                                data-bs-toggle="tooltip" title="Create">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/393/435/64/64/637588742363737916.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/createaddition"
+                                data-bs-toggle="tooltip" title="Create Addition">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/405/250/64/64/637616939209778882.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/create-automated"
+                                data-bs-toggle="tooltip" title="Create Automated">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/410/84/64/64/637626066720906614.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/create-deco"
+                                data-bs-toggle="tooltip" title="Create Deco">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/412/231/64/64/637631343026186429.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/create-gears"
+                                data-bs-toggle="tooltip" title="Create Gears">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/399/230/64/64/637602609368637818.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/appleskin"
+                                data-bs-toggle="tooltip" title="Appleskin">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/47/527/64/64/636066936394500688.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/farmers-delight"
+                                data-bs-toggle="tooltip" title="Farmer's Delight">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/396/11/64/64/637595005615179370.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/geolosys"
+                                data-bs-toggle="tooltip" title="Geolosys">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/166/575/64/64/636698669149917062.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://www.curseforge.com/minecraft/mc-mods/simple-storage-network"
+                                data-bs-toggle="tooltip" title="Simple Storage Network">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/100/305/64/64/636314361904813513.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/tinkers-construct"
+                                data-bs-toggle="tooltip" title="Tinkers Construct">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/488/295/64/64/637792495945179503.png"
+                                    class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li style="margin-top: 5px;">
+                    1.17
+                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212457&authkey=AB3mWauVZcFGjsE"
+                        class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
+                        Letöltés</a>
+                    <ul class="horizontal-list inline">
+                        <li>
+                            <a target="_blank" href="https://optifine.net/home" data-bs-toggle="tooltip"
+                                title="OptiFine">
+                                <img src="./mc-mod-optifine.jpg" class="mc-mod-icon" alt="Mod icon">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Foother -->
+    <footer class="mt-5 p-4 bg-dark text-white text-left">
+        <h3 style="display: inline-block;" class="mx-3">Kapcsolat</h3>
+        <div class="btn-group">
+            <a target="_blank" href="https://discord.gg/Uz4p3K88GJ" class="btn btn-discord"><i
+                    class='fab fa-discord'></i> Discord szerverem</a>
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-gmail dropdown-toggle text-white" data-bs-toggle="dropdown"><i
+                        class="fas fa-envelope-open"></i> Email</button>
+                <div class="dropdown-menu">
+                    <a target="_blank" class="dropdown-item" href="mailto:bazsi5fel2@gmail.com">bazsi5fel2@gmail.com</a>
+                    <a target="_blank" class="dropdown-item" href="mailto:bazsi5fel3@gmail.com">bazsi5fel3@gmail.com</a>
                 </div>
             </div>
-            <br>
-            <div class="card" id="programWeb">
-                <div class="card-header">Webböngésző v0.2.2
-                    <div class="popup" onclick="myFunction(7)"><img src="InfoButton.png">
-                        <span class="popuptext" id="myPopup7">
-                            <img src="LastModified.png"><b>Utoljára módosítva:</b>
-                            <div style="padding-left: 20px;">2021. június 29.</div>
-                        </span>
-                    </div>
-                </div>
-                <div class="card-body">Egy rossz webböngésző, ami másra nem jó mint a neve. Vannak beállítások, egyszerű és
-                    alap mód, előzmények, kedvencek.<br><br>
-                    <img src="warn.png"><b> Kissebb fájlokat hoz létre az AppData mappában, és a program mellé.</b><br><br>
-                    <a id="programokButton" class="btn"
-                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212450&authkey=AAHhouwZBqqkLPg"
-                        target="_blank">
-                        <img src="download.png">
-                        Letöltés</a>
-                </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content container-sm bg-dark text-light">
+            <div class="modal-header">
+                <h2 class="modal-title">Figyelem!</h2>
+                <span class="close">&times;</span>
             </div>
-            <br>
-            <div class="card" id="programNet">
-                <div class="card-header">Internet v0.2.3
-                    <div class="popup" onclick="myFunction(9)"><img src="InfoButton.png">
-                        <span class="popuptext" id="myPopup9">
-                            <img src="LastModified.png"><b>Utoljára módosítva:</b>
-                            <div style="padding-left: 20px;">2021. június 11.</div>
-                        </span>
-                    </div>
-                </div>
-                <div class="card-body">Ez egy komplexebb program a többinél.<br>Kilistázza az összes elérhető hálózati
-                    adaptert, megmutatja az aktuális internet státuszokat.<br>Ha egy adaptert kiválasztunk, kilistázza az
-                    összes megtalálható IP címet, és típus szerint csoportosítja. Az IP címek hostnevüket automatikusan
-                    betölti, majd elmenti. Megmutatja az adapter attribútumait, sebességét, nevét, azonosítóját, és a
-                    leírását.<br>Egy másik fülön megmutatja a csomag-forgalmat az adapteren. Megjeleníti a küldőt, fogadót,
-                    a kapcsolat típusát, és a csomag tartalmát. Mível sok csomag érkezik másodpercenként, van optimalizáló,
-                    ami kikapcsolja a csomagok listázását, amikor nem látható, de ez kikapcsolható. Ha egy csomag többször
-                    érkezik meg, azt összeolvasztja, és egy számmal jelzi, hogy gány csomagot olvasztott össze. A forgalmat
-                    egy grafikonon is megtekinthetjük. A csomagok küldő és fogadó IP címeket összegyűjti, és hozzáadja az
-                    előző oldal IP cím listájához, ahol kezelhetjük ezeket. Ha egy IP címet kiválasztunk, akkor van
-                    lehetőség a cím pingelésére, és a részletek megtekintésére, ahol le lehet kérdezni a host helyét, a host
-                    részletesebb nevét, ki lehet listázni az elérhető portokat, majd rá lehet csatlakozni egyre, és
-                    küldhetünk, vagy fogadhatunk üzeneteket.<br><br>
-                    <img src="shield.png"><b> Rendszergazdai jogosultság szükséges a program futtatásához!</b><br>
-                    <img src="warn.png"><b> Megfelelő internetkapcsolat kell a program futtatásához.</b><br>
-                    <img src="warn.png"><b> Kissebb fájlokat hoz létre és tölt le a program mellé.</b><br><br>
-                    <a id="programokButton" class="btn"
-                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212451&authkey=AFzYV0LKRZtbX9k"
-                        target="_blank">
-                        <img src="download.png">
-                        Letöltés</a>
-                </div>
-            </div>
-            <br>
-            <div class="card" id="programImgSlicer">
-                <div class="card-header">Image Slicer v0.1.0
-                    <div class="popup" onclick="myFunction(10)"><img src="InfoButton.png">
-                        <span class="popuptext" id="myPopup10">
-                            <img src="LastModified.png"><b>Utoljára módosítva:</b>
-                            <div style="padding-left: 20px;">2021. május 22.</div>
-                        </span>
-                    </div>
-                </div>
-                <div class="card-body">Ez a program szét tudja szeletelni a megadott képet, majd el lehet menteni egyessével
-                    egy mappába.<br><br>
-                    <a id="programokButton" class="btn"
-                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212455&authkey=AMBglOd0g4X_DqY"
-                        target="_blank">
-                        <img src="download.png">
-                        Letöltés</a>
-                </div>
-            </div>
-            <br>
-            <div class="card" id="resourcepacks">
-                <div class="card-header">Minecraft resource pack-ok</div>
-                <div class="card-body">
-                    <b>1.0</b>
-                    <a id="programokButton" class="btn"
-                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212456&authkey=ADiIpQzipc5pSSQ"
-                        target="_blank">
-                        <img src="download.png">
-                        Letöltés</a>
-                    <div class="popup" onclick="myFunction(0)"><img src="InfoButton.png">
-                        <span class="popuptext" id="myPopup0">
-                            <img src="LastModified.png"><b>Utoljára módosítva:</b>
-                            <div style="padding-left: 20px;">2021. június 24.</div>
-                        </span>
-                    </div>
-                    <br>
-                    <br>
-                    <b>1.12</b>
-                    <a id="programokButton" class="btn"
-                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212459&authkey=AEIQnGxv3lZOiuY"
-                        target="_blank">
-                        <img src="download.png">
-                        Letöltés</a>
-                    <div class="popup" onclick="myFunction(1)"><img src="InfoButton.png">
-                        <span class="popuptext" id="myPopup1">
-                            <img src="LastModified.png"><b>Utoljára módosítva:</b>
-                            <div style="padding-left: 20px;">2021. június 24.</div>
-                            <!-- <img src="MinecraftAddon.png"><b>Modok:</b>
-                        <ul>
-                            <li>Clay Soldiers</li>
-                            <li>Immersive Engineering</li>
-                            <li>Just Enough Items</li>
-                            <li>Tinkers Construc</li>
-                            <li>Weather, Storms & Tornadoes</li>
-                        </ul>-->
-                        </span>
-                    </div>
-                    <br>
-                    <br>
-                    <b>1.16</b>
-                    <a id="programokButton" class="btn"
-                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212458&authkey=AJYyfL1qiRtFbMI"
-                        target="_blank">
-                        <img src="download.png">
-                        Letöltés</a>
-                    <div class="popup" onclick="myFunction(4)"><img src="InfoButton.png">
-                        <span class="popuptext" id="myPopup2">
-                            <img src="LastModified.png"><b>Utoljára módosítva:</b>
-                            <div style="padding-left: 20px;">2021. július 7.</div>
-                            <img src="MinecraftAddon.png"><b>Modok:</b><br>
-                            <ul>
-                                <li>Create</li>
-                                <li>OptiFine</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <br>
-                    <br>
-                    <b>1.17</b>
-                    <a id="programokButton" class="btn"
-                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212457&authkey=AB3mWauVZcFGjsE"
-                        target="_blank">
-                        <img src="download.png">
-                        Letöltés</a>
-                    <div class="popup" onclick="myFunction(5)"><img src="InfoButton.png">
-                        <span class="popuptext" id="myPopup5">
-                            <img src="LastModified.png"><b>Utoljára módosítva:</b>
-                            <div style="padding-left: 20px;">2021. július 12.</div>
-                        </span>
-                    </div>
-                </div>
+            <div class="modal-body">
+                <p>A programokat csak Windows rendszerre lehet letölteni.</p>
             </div>
         </div>
     </div>
 
-    <p>
-        <script type="text/javascript">
-            //form tags to omit in NS6+:
-            var omitformtags = ["input", "textarea", "select"]
-            omitformtags = omitformtags.join("|")
-            function disableselect(e) {
-                if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
-                    return false
-            }
-            function reEnable() {
-                return true
-            }
-            if (typeof document.onselectstart != "undefined")
-                document.onselectstart = new Function("return false")
-            else {
-                document.onmousedown = disableselect
-                document.onmouseup = reEnable
-            }
-        </script>
-        <script type="text/javascript">
-            try {
-                var pageTracker = _gat._getTracker("UA-549331-28");
-                pageTracker._trackPageview();
-            } catch (err) {
-
-            }
-        </script>
-    </p>
+    <!-- On load event -->
     <script>
+        function OnLoad() {
+            ResetDownloadButtons();
+            document.getElementsByClassName("header")[0].classList.add("header-loaded")
+        }
+    </script>
+
+    <!-- Modal -->
+    <script>
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        function OpenModal() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
         window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Tooltips -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    <!-- Fade in on scroll -->
+    <script>
+        window.addEventListener("scroll", reveal);
+
+        // To check the scroll position on page load
+        reveal();
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+    </script>
+
+    <!-- Supported OS -->
+    <script>
+        function ResetDownloadButtons() {
+            const supportedPlatforms = ['win']
+            if (supportedPlatforms.indexOf(getOS()) !== -1) {
+                SetButtonsEnabled(true)
+            } else {
+                SetButtonsEnabled(false)
+                OpenModal()
+            }
+        }
+
+        function SetButtonsEnabled(enabled) {
+            const buttons = document.getElementsByClassName("downloadbutton")
+            for (let i = 0; i < buttons.length; i++) {
+                const button = buttons[i];
+                if (enabled == true) {
+                    if (button.classList.contains("disabled")) {
+                        button.classList.remove("disabled")
+                    }
+                } else {
+                    if (button.classList.contains("disabled")) {
+                    } else {
+                        button.classList.add("disabled")
                     }
                 }
             }
         }
 
+        function getOS() {
+            var userAgent = window.navigator.userAgent,
+                platform = window.navigator.platform,
+                macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+                windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+                iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+                os = null;
 
+            if (macosPlatforms.indexOf(platform) !== -1) {
+                os = 'macos';
+            } else if (iosPlatforms.indexOf(platform) !== -1) {
+                os = 'ios';
+            } else if (windowsPlatforms.indexOf(platform) !== -1) {
+                os = 'win';
+            } else if (/Android/.test(userAgent)) {
+                os = 'android';
+            } else if (!os && /Linux/.test(platform)) {
+                os = 'linux';
+            }
 
-        // When the user clicks on div, open the popup
-        function myFunction(popupIndex) {
-            var popup = document.getElementById("myPopup" + popupIndex);
-            popup.classList.toggle("show");
+            return os;
+        }
+        function detect() {
+            alert(`Device OS is: ${getOS()}`)
         }
     </script>
-
 </body>
 
 </html>
