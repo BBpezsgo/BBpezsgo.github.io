@@ -195,5 +195,5 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 }
 
 .container-background {
-    box-shadow: inset #000 0px 0px 7px;
+    box-shadow: inset #000 0px 0px 10px, #0006 0px 0px 10px;
 }
