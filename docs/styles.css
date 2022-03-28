@@ -197,3 +197,29 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 .container-background {
     box-shadow: inset #000 0px 0px 10px, #0006 0px 0px 10px;
 }
+
+/* Popover */
+.popover {
+    background-color: #000;
+}
+.popover-header {
+    background-color: #0000;
+    color: #fff;
+    padding: 6px;
+}
+.popover-body {
+    background-color: #0000;
+    color: #fffe;
+    padding: 6px;
+    padding-top: 0px;
+    padding-bottom: 6px;
+}
+.bs-popover-top>.popover-arrow::after {
+    border-top-color: #000;
+}
+
+/* Warning text */
+.warning-title {
+    font-variant: small-caps;
+    font-weight: bold;
+}

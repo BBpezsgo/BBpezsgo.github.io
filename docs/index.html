@@ -131,6 +131,7 @@
                     <ul>
                         <li>Elkezdtem: 2020. április 22-én</li>
                         <li>Utoljára módosítva: 2020. április 22-én</li>
+                        <li><i class='fas fa-exclamation-circle text-danger'></i> <span class="warning-title">Figyelem!</span> A játék fejlesztése megszűnt, nem lesz több frissítés ami több tartalmat ad a játékhoz.</li>
                     </ul>
                     <p>
                         Ezeket használtam:
@@ -138,7 +139,8 @@
                     <ul class="horizontal-list">
                         <li>
                             <a target="_blank" href="https://gamemakerblog.com/2009/12/22/game-maker-8-0-released/"
-                                data-bs-toggle="tooltip" title="Game Maker 8">
+                                data-bs-placement="top" title="Game Maker 8.0" data-bs-toggle="popover"
+                                data-bs-trigger="hover" data-bs-content="Game engine">
                                 <img src="used-programs/gamemaker8.png" class="used-program-icon"
                                     alt="Game maker 8 icon">
                             </a>
@@ -149,27 +151,45 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
-                        class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+                    <div class="btn-group">
+                        <a download
+                            href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
+                            class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Frissítő letöltése</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-success downloadbutton dropdown-toggle"
+                                data-bs-toggle="dropdown"></button>
+                            <div class="dropdown-menu">
+                                <a download class="dropdown-item"
+                                    href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212462&authkey=AOSqFj7hI33_6XI">Csak
+                                    a játék letöltése</a>
+                                <a download class="dropdown-item"
+                                    href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212461&authkey=AIHPJJRvtQeCy64">Zenefájl
+                                    letöltése</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6" style="margin-bottom: 20px;">
                     <h4>Nothing<span style="font-size: small;" class="badge bg-secondary">v2</span></h4>
                     <ul>
                         <li>Elkezdtem: 2021. február 1-én</li>
                         <li>Utoljára módosítva: 2020. április 22-én</li>
+                        <li><i class='fas fa-exclamation-circle text-danger'></i> <span class="warning-title">Figyelem!</span> A játék fejlesztés alatt áll. A jelenlegi verzió nem rendelkezik tartalommal.</li>
                     </ul>
                     <p>
                         Ezeket használtam:
                     </p>
                     <ul class="horizontal-list">
                         <li>
-                            <a target="_blank" href="https://unity.com/" data-bs-toggle="tooltip" title="Unity">
+                            <a target="_blank" href="https://unity.com/" data-bs-placement="top" title="Unity"
+                                data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Game engine">
                                 <img src="used-programs/unity.png" class="used-program-icon" alt="Unity icon">
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-toggle="tooltip"
-                                title="Visual Studio 2022">
+                            <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
+                                title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
+                                data-bs-content="Kódszerkesztő, debugger">
                                 <img src="used-programs/visualstudio2022.png" class="used-program-icon"
                                     alt="VS 2022 icon">
                             </a>
@@ -186,14 +206,16 @@
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://www.photonengine.com/pun" data-bs-toggle="tooltip"
-                                title="Photon PUN">
+                            <a target="_blank" href="https://www.photonengine.com/pun" data-bs-placement="top"
+                                title="Photon PUN" data-bs-toggle="popover" data-bs-trigger="hover"
+                                data-bs-content="Többjátékos mód online szerverekkel">
                                 <img src="used-programs/photon.png" class="used-program-icon" alt="Photon icon">
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://firebase.google.com/" data-bs-toggle="tooltip"
-                                title="Firebase">
+                            <a target="_blank" href="https://firebase.google.com/" data-bs-placement="top"
+                                title="Firebase" data-bs-toggle="popover" data-bs-trigger="hover"
+                                data-bs-content="A játékos főbb adatainak elmentése a Google szerverein">
                                 <img src="used-programs/firebase.png" class="used-program-icon" alt="Firebase icon">
                             </a>
                         </li>
@@ -203,13 +225,15 @@
                     </p>
                     <ul class="horizontal-list">
                         <li>
-                            <a target="_blank" href="https://trello.com" data-bs-toggle="tooltip" title="Trello API">
+                            <a target="_blank" href="https://trello.com" data-bs-placement="top" title="Trello API"
+                                data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Hibajelentés">
                                 <img src="used-programs/trello.png" class="used-program-icon" alt="Trello icon">
                             </a>
                         </li>
                         <li>
                             <a target="_blank" href="https://discord.com/developers/docs/game-sdk/sdk-starter-guide"
-                                data-bs-toggle="tooltip" title="Discord game SDK">
+                                data-bs-placement="top" title="Discord game SDK" data-bs-toggle="popover"
+                                data-bs-trigger="hover" data-bs-content='"Rich presence", barátok meghívása a játékba'>
                                 <img src="used-programs/discord.png" class="used-program-icon" alt="Discord icon">
                             </a>
                         </li>
@@ -225,8 +249,20 @@
                             telepít
                         </li>
                     </ul>
-                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
-                        class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+                    <div class="btn-group">
+                        <a download
+                            href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
+                            class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Frissítő letöltése</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-success downloadbutton dropdown-toggle"
+                                data-bs-toggle="dropdown"></button>
+                            <div class="dropdown-menu">
+                                <a download class="dropdown-item"
+                                    href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212452&authkey=APH5Cx2kgxy66K0">Csak
+                                    a játék letöltése</a>
+                            </div>
+                        </div>
+                    </div>
                     <a target="_blank" href="https://bbpezsgo.github.io/nothing.github.io/"
                         class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weboldal</a>
                 </div>
@@ -252,14 +288,15 @@
                     </p>
                     <ul class="horizontal-list">
                         <li>
-                            <a target="_blank" href="https://code.visualstudio.com/" data-bs-toggle="tooltip"
-                                title="Visual Studio Code">
+                            <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
+                                title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
+                                data-bs-content="Kódszerkesztő">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
                                     class="used-program-icon" alt="VS Code icon">
                             </a>
                         </li>
                     </ul>
-                    <a href="https://github.com/BBpezsgo/DiscordBot" class="btn btn-outline-primary"><i
+                    <a target="_blank" href="https://github.com/BBpezsgo/DiscordBot" class="btn btn-outline-primary"><i
                             class='fas fa-external-link-alt'></i> Reposity</a>
                 </div>
                 <div class="col-md-6" style="margin-bottom: 20px;">
@@ -283,8 +320,9 @@
                     </p>
                     <ul class="horizontal-list">
                         <li>
-                            <a target="_blank" href="https://code.visualstudio.com/" data-bs-toggle="tooltip"
-                                title="Visual Studio Code">
+                            <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
+                                title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
+                                data-bs-content="Kódszerkesztő">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
                                     class="used-program-icon" alt="VS Code icon">
                             </a>
@@ -297,9 +335,9 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="https://github.com/BBpezsgo/DDGB.PythonTutorial.io" class="btn btn-outline-primary"><i
+                    <a target="_blank" href="https://github.com/BBpezsgo/DDGB.PythonTutorial.io" class="btn btn-outline-primary"><i
                             class='fas fa-external-link-alt'></i> Reposity</a>
-                    <a href="https://bbpezsgo.github.io/DDGB.PythonTutorial.io/" class="btn btn-outline-secondary"><i
+                    <a target="_blank" href="https://bbpezsgo.github.io/DDGB.PythonTutorial.io/" class="btn btn-outline-secondary"><i
                             class='fas fa-external-link-alt'></i> Weblap</a>
                 </div>
                 <div class="col-md-6" style="margin-bottom: 20px;">
@@ -326,8 +364,9 @@
                     </p>
                     <ul class="horizontal-list">
                         <li>
-                            <a target="_blank" href="https://code.visualstudio.com/" data-bs-toggle="tooltip"
-                                title="Visual Studio Code">
+                            <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
+                                title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
+                                data-bs-content="Kódszerkesztő">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
                                     class="used-program-icon" alt="VS Code icon">
                             </a>
@@ -338,9 +377,9 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="https://github.com/BBpezsgo/HDRB.GsziMap.io" class="btn btn-outline-primary"><i
+                    <a target="_blank" href="https://github.com/BBpezsgo/HDRB.GsziMap.io" class="btn btn-outline-primary"><i
                             class='fas fa-external-link-alt'></i> Reposity</a>
-                    <a href="https://bbpezsgo.github.io/HDRB.GsziMap.io/" class="btn btn-outline-secondary"><i
+                    <a target="_blank" href="https://bbpezsgo.github.io/HDRB.GsziMap.io/" class="btn btn-outline-secondary"><i
                             class='fas fa-external-link-alt'></i> Weblap</a>
                 </div>
                 <div class="col-md-6" style="margin-bottom: 20px;">
@@ -353,14 +392,15 @@
                     </p>
                     <ul class="horizontal-list">
                         <li>
-                            <a target="_blank" href="https://code.visualstudio.com/" data-bs-toggle="tooltip"
-                                title="Visual Studio Code">
+                            <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
+                                title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
+                                data-bs-content="Kódszerkesztő">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
                                     class="used-program-icon" alt="VS Code icon">
                             </a>
                         </li>
                     </ul>
-                    <a href="https://github.com/BBpezsgo/SJW_hb_Banszky_Balazs_Ferenc"
+                    <a target="_blank" href="https://github.com/BBpezsgo/SJW_hb_Banszky_Balazs_Ferenc"
                         class="btn btn-outline-primary"><i class='fas fa-external-link-alt'></i> Reposity</a>
                 </div>
             </div>
@@ -382,8 +422,9 @@
             </p>
             <ul class="horizontal-list">
                 <li>
-                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-toggle="tooltip"
-                        title="Visual Studio 2022">
+                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
+                        title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
+                        data-bs-content="Kódszerkesztő, compiler, debugger">
                         <img src="used-programs/visualstudio2022.png" class="used-program-icon" alt="VS 2022 icon">
                     </a>
                 </li>
@@ -401,7 +442,7 @@
                     a program mellé.
                 </li>
             </ul>
-            <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212450&authkey=AAHhouwZBqqkLPg"
+            <a download href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212450&authkey=AAHhouwZBqqkLPg"
                 class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
         </div>
 
@@ -443,8 +484,9 @@
             </p>
             <ul class="horizontal-list">
                 <li>
-                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-toggle="tooltip"
-                        title="Visual Studio 2022">
+                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
+                        title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
+                        data-bs-content="Kódszerkesztő, compiler, debugger">
                         <img src="used-programs/visualstudio2022.png" class="used-program-icon" alt="VS 2022 icon">
                     </a>
                 </li>
@@ -470,7 +512,7 @@
                     mellé.
                 </li>
             </ul>
-            <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212451&authkey=AFzYV0LKRZtbX9k"
+            <a download href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212451&authkey=AFzYV0LKRZtbX9k"
                 class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
         </div>
 
@@ -493,8 +535,9 @@
             </p>
             <ul class="horizontal-list">
                 <li>
-                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-toggle="tooltip"
-                        title="Visual Studio 2022">
+                    <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
+                        title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
+                        data-bs-content="Kódszerkesztő, compiler, debugger">
                         <img src="used-programs/visualstudio2022.png" class="used-program-icon" alt="VS 2022 icon">
                     </a>
                 </li>
@@ -505,7 +548,7 @@
                     </a>
                 </li>
             </ul>
-            <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212455&authkey=AMBglOd0g4X_DqY"
+            <a download href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212455&authkey=AMBglOd0g4X_DqY"
                 class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
         </div>
 
@@ -528,13 +571,13 @@
             <ul>
                 <li>
                     1.0
-                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212456&authkey=ADiIpQzipc5pSSQ"
+                    <a download href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212456&authkey=ADiIpQzipc5pSSQ"
                         class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
                         Letöltés</a>
                 </li>
                 <li style="margin-top: 5px;">
                     1.12
-                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212459&authkey=AEIQnGxv3lZOiuY"
+                    <a download href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212459&authkey=AEIQnGxv3lZOiuY"
                         class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
                         Letöltés</a>
                     <ul class="horizontal-list inline">
@@ -605,7 +648,7 @@
                 </li>
                 <li style="margin-top: 5px;">
                     1.16
-                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212458&authkey=AJYyfL1qiRtFbMI"
+                    <a download href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212458&authkey=AJYyfL1qiRtFbMI"
                         class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
                         Letöltés</a>
                     <ul class="horizontal-list inline">
@@ -690,7 +733,7 @@
                 </li>
                 <li style="margin-top: 5px;">
                     1.17
-                    <a href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212457&authkey=AB3mWauVZcFGjsE"
+                    <a download href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212457&authkey=AB3mWauVZcFGjsE"
                         class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
                         Letöltés</a>
                     <ul class="horizontal-list inline">
@@ -852,6 +895,13 @@
         function detect() {
             alert(`Device OS is: ${getOS()}`)
         }
+    </script>
+
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
     </script>
 </body>
 
