@@ -130,7 +130,7 @@
                     <h4>Nothing<span style="font-size: small;" class="badge bg-secondary">v1</span></h4>
                     <ul>
                         <li>Elkezdtem: 2020. április 22-én</li>
-                        <li>Utoljára módosítva: 2021. december 23-án</li>
+                        <li>Utoljára módosítva: <span id="dates-nothingv1">?</span></li>
                         <li><i class='fas fa-exclamation-circle text-danger'></i> <span
                                 class="warning-title">Figyelem!</span> A játék fejlesztése megszűnt, nem lesz több
                             frissítés ami több tartalmat ad a játékhoz.</li>
@@ -176,7 +176,7 @@
                     <h4>Nothing<span style="font-size: small;" class="badge bg-secondary">v2</span></h4>
                     <ul>
                         <li>Elkezdtem: 2021. február 1-én</li>
-                        <li>Utoljára módosítva: 2022. március 20-án</li>
+                        <li>Utoljára módosítva: <span id="dates-nothingv2">?</span></li>
                         <li><i class='fas fa-exclamation-circle text-danger'></i> <span
                                 class="warning-title">Figyelem!</span> A játék fejlesztés alatt áll. A jelenlegi verzió
                             nem rendelkezik tartalommal.</li>
@@ -271,9 +271,10 @@
                     </div>
                     <a target="_blank" href="https://bbpezsgo.github.io/nothing.github.io/"
                         class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weboldal</a>
-                    <button type="button" class="btn btn-outline-secondary disabled" data-bs-toggle="modal" data-bs-target="#myModal2">
-                            Hibajelentés
-                        </button>
+                    <button type="button" class="btn btn-outline-secondary disabled" data-bs-toggle="modal"
+                        data-bs-target="#myModal2">
+                        Hibajelentés
+                    </button>
                 </div>
             </div>
             <div id="nothingnews">
@@ -438,7 +439,7 @@
             </p>
             <ul>
                 <li>Elkezdtem: 2020. április 22-én</li>
-                <li>Utoljára módosítva: 2021. december 12-én</li>
+                <li>Utoljára módosítva: <span id="dates-webbrowser">?</span></li>
             </ul>
             <p>
                 Ezeket használtam:
@@ -501,7 +502,7 @@
             </p>
             <ul>
                 <li>Elkezdtem: 2021. április 6-án</li>
-                <li>Utoljára módosítva: 2021. december 12-én</li>
+                <li>Utoljára módosítva: <span id="dates-ultimateprog">?</span></li>
             </ul>
             <p>
                 Ezeket használtam:
@@ -553,7 +554,7 @@
             </p>
             <ul>
                 <li>Elkezdtem: 2021. április 6-án</li>
-                <li>Utoljára módosítva: 2021. december 12-én</li>
+                <li>Utoljára módosítva: <span id="dates-imgslicer">?</span></li>
             </ul>
             <p>
                 Ezeket használtam:
@@ -816,38 +817,40 @@
 
     <!-- The Modal -->
     <div class="modal fade modal-bs" id="myModal2">
-      <div class="modal-dialog">
-        <div class="modal-content modal-bs">
-    
-          <!-- Modal Header -->
-          <div class="modal-header modal-bs">
-            <h4 class="modal-title">Hibajelentés</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-    
-          <!-- Modal body -->
-          <div class="modal-body modal-bs">
-              <div id="nothingerroruploadform">
-                <form action="" method="post">
-               
-                    <div class="mb-3 mt-3">
-                        <label for="title">Téma:</label>
-                        <input class="form-control" type="text" id="title" name="name" placeholder="Kidobodt a játék">
-                        <label for="desc">Részletek:</label>
-                        <input class="form-control" type="text" id="desc" name="desc" placeholder="Amikor elmentettem a játékmenetet, kidobodt a játék. Többjátékos módban játszottam.">
+        <div class="modal-dialog">
+            <div class="modal-content modal-bs">
+
+                <!-- Modal Header -->
+                <div class="modal-header modal-bs">
+                    <h4 class="modal-title">Hibajelentés</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body modal-bs">
+                    <div id="nothingerroruploadform">
+                        <form action="" method="post">
+
+                            <div class="mb-3 mt-3">
+                                <label for="title">Téma:</label>
+                                <input class="form-control" type="text" id="title" name="name"
+                                    placeholder="Kidobodt a játék">
+                                <label for="desc">Részletek:</label>
+                                <input class="form-control" type="text" id="desc" name="desc"
+                                    placeholder="Amikor elmentettem a játékmenetet, kidobodt a játék. Többjátékos módban játszottam.">
+                            </div>
+                            <input class="btn btn-primary" type="submit" value="Feltölt">
+                        </form>
                     </div>
-                    <input class="btn btn-primary" type="submit" value="Feltölt">
-                </form>
-              </div>
-              <div id="nothingerroruploaddone" style="display: none;">
-                  <i class="fas fa-check-circle text-success" style="font-size: 32px; display: inline;"></i>
-                  <h2 style="display: inline;">Köszönjük a feltöltést!</h2>
-                  <h4>Igyekszünk mihamarabb kijavítani a hibát.</h4>
-              </div>
-          </div>
-    
+                    <div id="nothingerroruploaddone" style="display: none;">
+                        <i class="fas fa-check-circle text-success" style="font-size: 32px; display: inline;"></i>
+                        <h2 style="display: inline;">Köszönjük a feltöltést!</h2>
+                        <h4>Igyekszünk mihamarabb kijavítani a hibát.</h4>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- On load event -->
@@ -986,21 +989,21 @@
     </script>
 
     <script>
-        function parseMd(md){
-            
+        function parseMd(md) {
+
             //ul
             md = md.replace(/^\s*\n\*/gm, '<ul>\n*');
             md = md.replace(/^(\*.+)\s*\n([^\*])/gm, '$1\n</ul>\n\n$2');
             md = md.replace(/^\*(.+)/gm, '<li>$1</li>');
-            
+
             //ol
             md = md.replace(/^\s*\n\d\./gm, '<ol>\n1.');
             md = md.replace(/^(\d\..+)\s*\n([^\d\.])/gm, '$1\n</ol>\n\n$2');
             md = md.replace(/^\d\.(.+)/gm, '<li>$1</li>');
-            
+
             //blockquote
             md = md.replace(/^\>(.+)/gm, '<blockquote>$1</blockquote>');
-            
+
             //h
             md = md.replace(/[\#]{6}(.+)/g, '<h6>$1</h6>');
             md = md.replace(/[\#]{5}(.+)/g, '<h5>$1</h5>');
@@ -1008,66 +1011,66 @@
             md = md.replace(/[\#]{3}(.+)/g, '<h3>$1</h3>');
             md = md.replace(/[\#]{2}(.+)/g, '<h2>$1</h2>');
             md = md.replace(/[\#]{1}(.+)/g, '<h1>$1</h1>');
-            
+
             //alt h
             md = md.replace(/^(.+)\n\=+/gm, '<h1>$1</h1>');
             md = md.replace(/^(.+)\n\-+/gm, '<h2>$1</h2>');
-            
+
             //images
             md = md.replace(/\!\[([^\]]+)\]\(([^\)]+)\)/g, '<img src="$2" alt="$1" />');
-            
+
             //links
             md = md.replace(/[\[]{1}([^\]]+)[\]]{1}[\(]{1}([^\)\"]+)(\"(.+)\")?[\)]{1}/g, '<a href="$2" title="$4">$1</a>');
-            
+
             //font styles
             md = md.replace(/[\*\_]{2}([^\*\_]+)[\*\_]{2}/g, '<b>$1</b>');
             md = md.replace(/[\*\_]{1}([^\*\_]+)[\*\_]{1}/g, '<i>$1</i>');
             md = md.replace(/[\~]{2}([^\~]+)[\~]{2}/g, '<del>$1</del>');
-            
+
             //pre
             md = md.replace(/^\s*\n\`\`\`(([^\s]+))?/gm, '<pre class="$2">');
             md = md.replace(/^\`\`\`\s*\n/gm, '</pre>\n\n');
-            
+
             //code
             md = md.replace(/[\`]{1}([^\`]+)[\`]{1}/g, '<code>$1</code>');
-            
+
             //p
-            md = md.replace(/^\s*(\n)?(.+)/gm, function(m){
-                return  /\<(\/)?(h\d|ul|ol|li|blockquote|pre|img)/.test(m) ? m : '<p>'+m+'</p>';
+            md = md.replace(/^\s*(\n)?(.+)/gm, function (m) {
+                return /\<(\/)?(h\d|ul|ol|li|blockquote|pre|img)/.test(m) ? m : '<p>' + m + '</p>';
             });
-            
+
             //strip p from pre
             md = md.replace(/(\<pre.+\>)\s*\n\<p\>(.+)\<\/p\>/gm, '$1$2');
-            
+
             return md;
-            
+
         }
 
         const outputEl = document.getElementById('output-html'),
-        parse = function(txt){
-            outputEl.innerHTML = parseMd(txt);
-        };
+            parse = function (txt) {
+                outputEl.innerHTML = parseMd(txt);
+            };
     </script>
 
     <script>
         var url = 'https://raw.githubusercontent.com/BBpezsgo/allmyprograms.github.io/main/nothing-news.txt';
         try {
             fetch(url)
-            .then(function(response) {
-                if (response.ok) {
-                    response.text().then(function(text) {
-                        if (text.length < 5) {
-                            document.getElementById("nothingnews").style.display = "none"
-                        } else {
-                            parse(text)
-                        }
-                    });
-                } else {
+                .then(function (response) {
+                    if (response.ok) {
+                        response.text().then(function (text) {
+                            if (text.length < 5) {
+                                document.getElementById("nothingnews").style.display = "none"
+                            } else {
+                                parse(text)
+                            }
+                        });
+                    } else {
+                        document.getElementById("nothingnews").style.display = "none"
+                    }
+                }).catch((err) => {
                     document.getElementById("nothingnews").style.display = "none"
-                }
-            }).catch((err) => {
-                document.getElementById("nothingnews").style.display = "none"
-            })
+                })
         } catch (error) {
             document.getElementById("nothingnews").style.display = "none"
         }
@@ -1082,6 +1085,80 @@
             thankYouMessage.style.display = "block"
             formBody.style.display = "none"
         });
+    </script>
+
+    <script>
+        try {
+            fetch("https://raw.githubusercontent.com/BBpezsgo/allmyprograms.github.io/main/dates.txt")
+                .then(function (response) {
+                    if (response.ok) {
+                        response.text().then(function (text) {
+                            if (text.length < 5) {
+                                document.getElementById("nothingnews").style.display = "none"
+                            } else {
+                                ResetDates(text)
+                            }
+                        });
+                    } else {
+                        document.getElementById("nothingnews").style.display = "none"
+                    }
+                }).catch((err) => {
+                    document.getElementById("nothingnews").style.display = "none"
+                })
+        } catch (error) {
+            document.getElementById("nothingnews").style.display = "none"
+        }
+
+        function ResetDates(str) {
+            const nothingv1 = document.getElementById("dates-nothingv1")
+            const nothingv2 = document.getElementById("dates-nothingv2")
+            const ultimateprog = document.getElementById("dates-ultimateprog")
+            const webbrowser = document.getElementById("dates-webbrowser")
+            const imgslicer = document.getElementById("dates-imgslicer")
+
+            const listOfDates = str.split("\n")
+            for (let i = 0; i < listOfDates.length; i++) {
+                const date = listOfDates[i];
+                if (date.length < 3) { continue; }
+                if (date.includes(" ")) {
+                    const program = date.split(" ")[0]
+                    const modifyDate = date.split(" ")[1]
+
+                    if (program == "nothingv1") {
+                        nothingv1.innerText = GetTimeEllapes(Date.parse(modifyDate))
+                    } else if (program == "nothingv2") {
+                        nothingv2.innerText = GetTimeEllapes(Date.parse(modifyDate))
+                    } else if (program == "webbrowser") {
+                        webbrowser.innerText = GetTimeEllapes(Date.parse(modifyDate))
+                    } else if (program == "imgslicer") {
+                        imgslicer.innerText = GetTimeEllapes(Date.parse(modifyDate))
+                    } else if (program == "ultimateprog") {
+                        ultimateprog.innerText = GetTimeEllapes(Date.parse(modifyDate))
+                    }
+                }
+            }
+        }
+
+        function GetTimeEllapes(dateNum) {
+            var val = Math.floor((Date.now() - dateNum) / 1000 / 60 / 60 / 24)
+            if (val == 0) {
+                return "ma"
+            } else if (val == 1) {
+                return "tegnap"
+            } else {
+                var suffix = " napja"
+                const oneMonth = 30.4368499167
+                if (val >= oneMonth) {
+                    val = Math.floor(val / oneMonth)
+                    suffix = " hónapja"
+                }
+                if (val >= 12) {
+                    val = Math.floor(val / 12)
+                    suffix = " éve"
+                }
+                return (val + suffix)
+            }
+        }
     </script>
 </body>
 
