@@ -1,6 +1,6 @@
 /* General */
 
-li {
+li:not(#output-html>li) {
     list-style: none;
 }
 
@@ -12,7 +12,7 @@ li {
     display: inline;
 }
 
-a {
+a:not(#output-html>li) {
     text-decoration: none;
 }
 
@@ -249,12 +249,12 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 .nothing-news {
     max-height: 300px;
     overflow: scroll;
-    transition-duration: 500ms;
+    transition: max-height 500ms;
 }
 .nothing-news.hide {
     max-height: 0px;
     overflow: hidden;
-    transition-duration: 500ms;
+    transition: max-height 500ms;
 }
 
 .nothing-news-button-icon {
@@ -263,4 +263,12 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 
 .nothing-news-button-icon.opened {
     transform: rotate(180deg);
+}
+.nothing-news::-webkit-scrollbar {
+  width: 5px !important; 
+  box-shadow: none !important; 
+}
+.nothing-news::-webkit-scrollbar-thumb {
+  background: #8d8d8d !important; 
+  border-radius: 2px !important;
 }

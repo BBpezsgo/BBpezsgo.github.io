@@ -1006,11 +1006,8 @@
 
         const outputEl = document.getElementById('output-html'),
         parse = function(txt){
-            outputEl.innerHTML = parseMd(mdEl.innerText);
+            outputEl.innerHTML = parseMd(txt);
         };
-
-        parse(document.getElementById('markdown').innerText);
-
     </script>
 
     <script>
@@ -1020,11 +1017,17 @@
             .then(function(response) {
                 if (response.ok) {
                     response.text().then(function(text) {
-                        parse(text)
+                        if (text.length < 5) {
+                            document.getElementById("nothingnews").style.display = "none"
+                        } else {
+                            parse(text)
+                        }
                     });
                 } else {
-                    //document.getElementById("nothingnews").style.display = "none"
+                    document.getElementById("nothingnews").style.display = "none"
                 }
+            }).catch((err) => {
+                document.getElementById("nothingnews").style.display = "none"
             })
         } catch (error) {
             document.getElementById("nothingnews").style.display = "none"
