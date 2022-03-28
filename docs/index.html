@@ -271,6 +271,9 @@
                     </div>
                     <a target="_blank" href="https://bbpezsgo.github.io/nothing.github.io/"
                         class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weboldal</a>
+                    <button type="button" class="btn btn-outline-secondary disabled" data-bs-toggle="modal" data-bs-target="#myModal2">
+                            Hibajelentés
+                        </button>
                 </div>
             </div>
             <div id="nothingnews">
@@ -811,6 +814,42 @@
         </div>
     </div>
 
+    <!-- The Modal -->
+    <div class="modal fade modal-bs" id="myModal2">
+      <div class="modal-dialog">
+        <div class="modal-content modal-bs">
+    
+          <!-- Modal Header -->
+          <div class="modal-header modal-bs">
+            <h4 class="modal-title">Hibajelentés</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body modal-bs">
+              <div id="nothingerroruploadform">
+                <form action="" method="post">
+               
+                    <div class="mb-3 mt-3">
+                        <label for="title">Téma:</label>
+                        <input class="form-control" type="text" id="title" name="name" placeholder="Kidobodt a játék">
+                        <label for="desc">Részletek:</label>
+                        <input class="form-control" type="text" id="desc" name="desc" placeholder="Amikor elmentettem a játékmenetet, kidobodt a játék. Többjátékos módban játszottam.">
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Feltölt">
+                </form>
+              </div>
+              <div id="nothingerroruploaddone" style="display: none;">
+                  <i class="fas fa-check-circle text-success" style="font-size: 32px; display: inline;"></i>
+                  <h2 style="display: inline;">Köszönjük a feltöltést!</h2>
+                  <h4>Igyekszünk mihamarabb kijavítani a hibát.</h4>
+              </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
     <!-- On load event -->
     <script>
         function OnLoad() {
@@ -1032,6 +1071,17 @@
         } catch (error) {
             document.getElementById("nothingnews").style.display = "none"
         }
+    </script>
+
+    <script>
+        const form = document.querySelector('form');
+        const thankYouMessage = document.getElementById("nothingerroruploaddone");
+        const formBody = document.getElementById("nothingerroruploadform");
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            thankYouMessage.style.display = "block"
+            formBody.style.display = "none"
+        });
     </script>
 </body>
 

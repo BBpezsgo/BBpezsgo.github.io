@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     height: 0px;
   }
 /* Modal */
-.modal {
+.modal:not(.modal-bs) {
     display: none;
     position: fixed;
     z-index: 2;
@@ -144,18 +144,18 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     margin-bottom: -1px;
 }
   
-.close {
+.close:not(.modal-bs) {
     float: left;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
   
-.modal-header {
+.modal-header:not(.modal-bs) {
     padding: 2px 16px;
 }
   
-.modal-body {padding: 2px 16px;}
+.modal-body:not(.modal-bs) {padding: 2px 16px;}
     
 @-webkit-keyframes slideIn {
     from {bottom: -300px; opacity: 0} 
@@ -271,4 +271,8 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 .nothing-news::-webkit-scrollbar-thumb {
   background: #8d8d8d !important; 
   border-radius: 2px !important;
+}
+
+.modal-content.modal-bs>* {
+    border: none !important;
 }
