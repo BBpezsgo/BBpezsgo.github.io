@@ -79,11 +79,6 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 }
 
 /* Animation on scroll */
-.reveal>h1 {
-    transition-delay: 100ms;
-    transform: translateX(-20px);
-}
-
 .reveal>*:not(.btn) {
     transition-delay: 300ms;
     transition-duration: 500ms;
@@ -96,27 +91,28 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     transition-delay: 0ms !important;
 }
 
-.reveal{
+.reveal {
     position: relative;
-    transform: translateY(50px);
+    transform: translateY(50px) scale(.95);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 1000ms ease;
 }
 
-.reveal.active{
-    transform: translateY(0);
+.reveal.active {
+    transform: translateY(0) scale(1);
     opacity: 1;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  box-shadow: #0006 5px 0px 3px inset;
+    width: 10px;
+    height: 10px;
+    box-shadow: #0002 5px 0px 3px inset;
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #8d8d8d; 
-  border-radius: 5px;
+    background: #8d8d8d; 
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -195,17 +191,18 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     opacity: 0;
 }
 
+.header>* {
+    text-shadow: #000b 0px 0px 5px;
+}
+
 .header-loaded {
     opacity: 1;
 }
 
 /* Containers */
-.container {
-    border-radius: 10px;
-}
 
 .container-background {
-    box-shadow: inset #000 0px 0px 10px, #0006 0px 0px 10px;
+    box-shadow: #000c 5px 5px 10px;
 }
 
 /* Popover */
@@ -283,4 +280,42 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 
 .modal-content.modal-bs>* {
     border: none !important;
+}
+
+.nothing-transation-background {
+    background-image: url(nothing-background.png);
+    background-size: 256px;
+    image-rendering: pixelated;
+
+    z-index: 50;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 500%;
+    width: 0%;
+    opacity: .3;
+}
+
+.nothing-transation-background-active {
+    top: 0px;
+    left: 0px;
+    height: 500%;
+    width: 100%;
+    opacity: 1;
+}
+
+body {
+	background: linear-gradient(to bottom, #899197, #968057, #384581, #2b6194, #704024 );
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+body:before{
+	content:'';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+	background: linear-gradient(to right bottom, rgba(255,255,255,0.2), #73797e 75%);
 }

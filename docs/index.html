@@ -63,6 +63,8 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="330" class="bg-secondary" onload="OnLoad()">
 
+    <div id="nothing-transation-background" class="nothing-transation-background"></div>
+    
     <div id="blur">
         <!-- Skip nav button -->
         <a href="#main-content" class="skip-nav-link text-light">Skip navigation</a>
@@ -115,11 +117,11 @@
         </div>
 
         <!-- Main -->
-        <div class="container mt-5">
+        <div class="main-content container mt-5">
 
             <!-- Nothing -->
             <div id="nothing" class="container bg-dark text-white py-2 reveal container-background" style="
-            background-image: linear-gradient(#0005,  var(--bs-dark)), url(nothing-background.png);
+            background-image: linear-gradient(#0005,  #292621), url(nothing-background.png);
             background-size: 256px;
             ">
                 <h1><img src="programs/nothing.png" class="program-icon" alt="Nothing icon">Nothing</h1>
@@ -143,7 +145,7 @@
                         <ul class="horizontal-list">
                             <li>
                                 <a target="_blank" href="https://gamemakerblog.com/2009/12/22/game-maker-8-0-released/"
-                                    data-bs-placement="top" title="Game Maker 8.0" data-bs-toggle="popover"
+                                    data-bs-placement="top" title="Game Maker 8.0 Pro" data-bs-toggle="popover"
                                     data-bs-trigger="hover" data-bs-content="Game engine">
                                     <img src="used-programs/gamemaker8.png" class="used-program-icon"
                                         alt="Game maker 8 icon">
@@ -241,6 +243,14 @@
                                     <img src="used-programs/discord.png" class="used-program-icon" alt="Discord icon">
                                 </a>
                             </li>
+                            <li>
+                                <a target="_blank" href="https://onedrive.live.com/"
+                                    data-bs-placement="top" title="OneDrive" data-bs-toggle="popover"
+                                    data-bs-trigger="hover"
+                                    data-bs-content='Felhőtárhely a játéknak, verziószámnak, és az egyéb adatoknak'>
+                                    <img src="used-programs/onedrive.png" class="used-program-icon" alt="Discord icon">
+                                </a>
+                            </li>
                         </ul>
                         <div style="height: 20px;"></div>
                         <ul>
@@ -268,8 +278,14 @@
                                 </div>
                             </div>
                         </div>
-                        <a target="_blank" href="https://bbpezsgo.github.io/nothing.github.io/"
-                            class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weboldal</a>
+                        <button
+                        onclick="
+                        document.getElementById('nothing-transation-background').classList.add('nothing-transation-background-active');
+                        setTimeout(() => {
+                            window.location.href = 'https://bbpezsgo.github.io/nothing.github.io/' },
+                            500)
+                        "
+                            class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weboldal</button>
                         <button type="button" class="btn btn-outline-secondary disabled" data-bs-toggle="modal"
                             data-bs-target="#myModal2">
                             Hibajelentés
@@ -294,7 +310,7 @@
 
             <!-- GitHub -->
             <div id="github" class="mt-5 container bg-dark text-white py-2 reveal container-background" style="
-            background-image: linear-gradient(#0005,  var(--bs-dark)), url(https://github.blog/wp-content/uploads/2020/12/2-2.png?resize=1024%2C613);
+            background-image: linear-gradient(#0005,  #1e1735), url(https://github.blog/wp-content/uploads/2020/12/2-2.png?resize=1024%2C613);
             background-size:cover;
             background-position: center;
             ">
@@ -473,7 +489,7 @@
 
             <!-- Ultimate program -->
             <div id="ultimateprogram" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
-            background-image: linear-gradient(#0005,  var(--bs-dark)), url(https://img.freepik.com/free-photo/digital-technology-network-data-communication-concept-abstract-background-earth-element-furnished-by-nasa_24070-631.jpg);
+            background-image: linear-gradient(#0005,  #1d2847), url(https://img.freepik.com/free-photo/digital-technology-network-data-communication-concept-abstract-background-earth-element-furnished-by-nasa_24070-631.jpg);
             background-size:cover;
             background-position: center;
             ">
@@ -551,7 +567,7 @@
 
             <!-- Image slicer -->
             <div id="imageslicer" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
-            background-image: linear-gradient(#0005,  var(--bs-dark)), url(https://wallpaperaccess.com/full/1558939.jpg);
+            background-image: linear-gradient(#0005,  #1a2c38), url(https://wallpaperaccess.com/full/1558939.jpg);
             background-size:cover;
             background-position: center;
             ">
@@ -589,7 +605,7 @@
             <!-- MC packs -->
             <div id="mcpacks" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
             background-size: 32px;
-            background-image: linear-gradient(#0005,  var(--bs-dark)), url(mc-background.png);
+            background-image: linear-gradient(#0005,  #3a291c), url(mc-background.png);
             ">
                 <h1>Minecraft resource pack-ok</h1>
                 <p>
