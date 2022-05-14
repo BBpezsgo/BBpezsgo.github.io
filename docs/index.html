@@ -160,18 +160,20 @@
                         <div class="btn-group">
                             <a download
                                 href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
-                                class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Frissítő
-                                letöltése</a>
+                                class="btn btn-outline-success downloadbutton platform-windows">
+                                <i class='fas fa-download'></i>
+                                Frissítő letöltése
+                            </a>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-outline-success downloadbutton dropdown-toggle"
                                     data-bs-toggle="dropdown"></button>
                                 <div class="dropdown-menu">
-                                    <a download class="dropdown-item"
-                                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212462&authkey=AOSqFj7hI33_6XI">Csak
-                                        a játék letöltése</a>
-                                    <a download class="dropdown-item"
-                                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212461&authkey=AIHPJJRvtQeCy64">Zenefájl
-                                        letöltése</a>
+                                    <a download class="dropdown-item platform-windows"
+                                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212462&authkey=AOSqFj7hI33_6XI">
+                                        Csak a játék letöltése</a>
+                                    <a download class="dropdown-item platform-windows"
+                                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212461&authkey=AIHPJJRvtQeCy64">
+                                        Zenefájl letöltése</a>
                                 </div>
                             </div>
                         </div>
@@ -263,29 +265,62 @@
                                 telepít
                             </li>
                         </ul>
-                        <div class="btn-group">
-                            <a download
-                                href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
-                                class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Frissítő
-                                letöltése</a>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-outline-success downloadbutton dropdown-toggle"
-                                    data-bs-toggle="dropdown"></button>
-                                <div class="dropdown-menu">
-                                    <a download class="dropdown-item"
-                                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212452&authkey=APH5Cx2kgxy66K0">Csak
-                                        a játék letöltése</a>
+                        <table style="margin-bottom: 10px;">
+                            <tr>
+                                <td>
+                                    <span style="line-height: 30px;">
+                                        <img src="windows.png" height="30px" style="transform: translateY(-1px);">
+                                        Windows:
+                                    </span>
+                                </td>
+                                <td>
+                                <div class="btn-group">
+                                    <!-- https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%2153953&authkey=AGzEmFeVqLC9Z9k -->
+                                    <a download
+                                        href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
+                                        class="btn btn-outline-success downloadbutton platform-windows">
+                                        <i class='fas fa-download'></i>
+                                        Frissítő letöltése
+                                    </a>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-outline-success downloadbutton dropdown-toggle"
+                                            data-bs-toggle="dropdown">
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a download class="dropdown-item platform-windows"
+                                                href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212452&authkey=APH5Cx2kgxy66K0">
+                                                Csak a játék letöltése
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td>
+                                    <span style="line-height: 30px;"><img src="android.png" height="30px" style="transform: translateY(-1px);">Android:</span>
+                                </td>
+                                <td>
+                                    <a download
+                                    href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%2153953&authkey=AGzEmFeVqLC9Z9k"
+                                    class="btn btn-outline-success downloadbutton platform-android">
+                                    <i class='fas fa-download'></i>
+                                    APK letöltése</a>
+                                </td>
+                            </tr>
+                        </table>
+
                         <button
-                        onclick="
-                        document.getElementById('nothing-transation-background').classList.add('nothing-transation-background-active');
-                        setTimeout(() => {
-                            window.location.href = 'https://bbpezsgo.github.io/nothing.github.io/' },
-                            500)
-                        "
-                            class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weboldal</button>
+                            onclick="
+                            document.getElementById('nothing-transation-background').classList.add('nothing-transation-background-active');
+                            setTimeout(() => {
+                                window.location.href = 'https://bbpezsgo.github.io/nothing.github.io/' },
+                                500)
+                            "
+                            class="btn btn-outline-secondary">
+                            <i class='fas fa-external-link-alt'></i>
+                            Weboldal
+                        </button>
                         <button type="button" class="btn btn-outline-secondary disabled" data-bs-toggle="modal"
                             data-bs-target="#myModal2">
                             Hibajelentés
@@ -484,7 +519,10 @@
                 </ul>
                 <a download
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212450&authkey=AAHhouwZBqqkLPg"
-                    class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+                    class="btn btn-outline-success downloadbutton platform-windows">
+                    <i class='fas fa-download'></i>
+                    Letöltés
+                </a>
             </div>
 
             <!-- Ultimate program -->
@@ -562,7 +600,10 @@
                 </ul>
                 <a download
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212451&authkey=AFzYV0LKRZtbX9k"
-                    class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+                    class="btn btn-outline-success downloadbutton platform-windows">
+                    <i class='fas fa-download'></i>
+                    Letöltés
+                </a>
             </div>
 
             <!-- Image slicer -->
@@ -599,7 +640,10 @@
                 </ul>
                 <a download
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212455&authkey=AMBglOd0g4X_DqY"
-                    class="btn btn-outline-success downloadbutton"><i class='fas fa-download'></i> Letöltés</a>
+                    class="btn btn-outline-success downloadbutton platform-windows">
+                    <i class='fas fa-download'></i>
+                    Letöltés
+                </a>
             </div>
 
             <!-- MC packs -->
@@ -1088,17 +1132,23 @@
     <!-- Supported OS -->
     <script>
         function ResetDownloadButtons() {
-            const supportedPlatforms = ['win']
-            if (supportedPlatforms.indexOf(getOS()) !== -1) {
-                SetButtonsEnabled(true)
+
+            if (getOS() == 'win') {
+                SetButtonsEnabled(true, "platform-windows")
             } else {
-                SetButtonsEnabled(false)
+                SetButtonsEnabled(false, "platform-windows")
                 OpenModal()
+            }
+            
+            if (getOS() == 'android') {
+                SetButtonsEnabled(true, "platform-android")
+            } else {
+                SetButtonsEnabled(false, "platform-android")
             }
         }
 
-        function SetButtonsEnabled(enabled) {
-            const buttons = document.getElementsByClassName("downloadbutton")
+        function SetButtonsEnabled(enabled, tags) {
+            const buttons = document.getElementsByClassName(tags)
             for (let i = 0; i < buttons.length; i++) {
                 const button = buttons[i];
                 if (enabled == true) {
