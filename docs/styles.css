@@ -294,6 +294,8 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     height: 500%;
     width: 0%;
     opacity: .3;
+
+    transition: opacity 200ms;
 }
 
 .nothing-transation-background-active {
