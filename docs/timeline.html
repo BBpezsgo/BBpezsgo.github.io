@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>BB - Idővonal</title>
+
+    <meta name="author" content="BB">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="revised detail" content="2022. 03. 27">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BB Idővonal">
+    <meta property="og:description" content="Nothing játék, Webböngésző, Ultimate Program, stb.">
+    <meta property="og:url" content="https://bbpezsgo.github.io/allmyprograms.github.io/">
+    <meta property="og:image" content="https://bbpezsgo.github.io/allmyprograms.github.io/icons/ico1.png">
+    <meta data-react-helmet="true" name="theme-color" content="#0d6efd">
+    <meta property="og:site_name" content="BB Idővonal">
+    <meta name="twitter:card" content="https://bbpezsgo.github.io/allmyprograms.github.io/icons/ico1.png">
+    <meta name="twitter:site" content="@discord">
+    <meta name="twitter:creator" content="@User0057#0057">
+
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d70969805a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="timeline.css">
+    <link rel="icon" href="./icons/ico0.png" sizes="16x16">
+
+    <!-- Disable context menu -->
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+
+    <!-- Disable select -->
+    <script>
+        //form tags to omit in NS6+:
+        var omitformtags = ["input", "textarea", "select"]
+        omitformtags = omitformtags.join("|")
+        function disableselect(e) {
+            if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+                return false
+        }
+        function reEnable() {
+            return true
+        }
+        if (typeof document.onselectstart != "undefined")
+            document.onselectstart = new Function("return false")
+        else {
+            document.onmousedown = disableselect
+            document.onmouseup = reEnable
+        }
+    </script>
+    <script>
+        try {
+            var pageTracker = _gat._getTracker("UA-549331-28");
+            pageTracker._trackPageview();
+        } catch (err) {
+
+        }
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="330" class="bg-secondary" onload="OnLoad()">
+
+    <div id="nothing-transation-background" class="nothing-transation-background"></div>
+
+    <div id="blur">
+        <!-- Skip nav button -->
+        <a href="#main-content" class="skip-nav-link text-light">Skip navigation</a>
+
+        <!-- Header -->
+        <div class="bg-primary text-white text-center header">
+            <h1>Bánszky Balázs</h1>
+            <p>Idővonal</p>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top"
+            style="z-index: 1; box-shadow: #000 0px 0px 10px;">
+            <div class="container-fluid">
+                <a href="https://github.com/BBpezsgo/" target="_blank" class="navbar-brand"><img
+                        class="rounded-circle mx-1" style="height: 40px;" src="./ProfilPicture.png"
+                        alt="Profil picture">BB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nothing">Nothing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#github">GitHub projectek</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#webbrowser">Webböngésző</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ultimateprogram">Ultimate Program</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#imageslicer">Image Slicer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mcpacks">Minecraft resource pack-ok</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#firstprogram">Az első GUI-el rendelkező alkalmazásom</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main -->
+        <div class="main-content container" style="width: 100%; padding: 0px;">
+        <div class="timeline">
+                <div class="timeline-row">
+                    <div class="timeline-time">
+                        2019 <small>március 19.</small>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>A mostani gépemet ekkor kaptam meg.</h4>
+                    </div>
+                </div>
+        
+                <div class="timeline-row">
+                    <div class="timeline-time">
+                        8:00 AM<small>Dec 18</small>
+                    </div>
+                    <div class="timeline-content">
+                        <i class="icon-code"></i>
+                        <h4>Admin Dashboard!</h4>
+                        <p>
+                            Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar.
+                        </p>
+                        <div class="thumbs">
+                            <div class="thumbs">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Maxwell Admin">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Maxwell Admin">
+                        </div>
+                        </div>
+                        <div class="">
+                            <span class="badge badge-pill">Graphs</span>
+                            <span class="badge badge-pill">Chat</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="timeline-row">
+                    <div class="timeline-time">
+                        7:25 PM<small>Dec 6</small>
+                    </div>
+                    <div class="timeline-content">
+                        <i class="icon-turned_in_not"></i>
+                        <h4>Best Admin Template!</h4>
+                        <p>Custom C3 graphs, Custom flot graphs, flot graphs, small graphs, Sass, profile and timeline.</p>
+                        <div>
+                            <span class="badge badge-pill">Invoice</span>
+                            <span class="badge badge-pill">Tasks</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="timeline-row">
+                    <div class="timeline-time">
+                        3:55 PM<small>Dec 26</small>
+                    </div>
+                    <div class="timeline-content">
+                        <i class="icon-directions"></i>
+                        <h4>Maxwell Admin</h4>
+                        <p>Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar, drag &amp; drop and ion slider.</p>
+                        <div>
+                            <span class="badge badge-pill">Profile</span>
+                            <span class="badge badge-pill">Sales</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="timeline-row">
+                    <div class="timeline-time">
+                        5:24 PM<small>Dec 12</small>
+                    </div>
+                    <div class="timeline-content">
+                        <i class="icon-change_history"></i>
+                        <h4>Maxwell Dashboard</h4>
+                        <p class="no-margin">Maxwell Admin dashboard includes invoice, profile, tasks, gallery, projects, maintanence.</p>
+                        <div class="thumbs">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Maxwell Admin">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Maxwell Admin">
+                        </div>
+                        <div>
+                            <span class="badge badge-pill">Analytics</span>
+                            <span class="badge badge-pill">Contacts</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="timeline-row">
+                    <div class="timeline-time">
+                        8:00 AM<small>Dec 18</small>
+                    </div>
+                    <div class="timeline-content">
+                        <i class="icon-code"></i>
+                        <h4>Admin Dashboard!</h4>
+                        <p>
+                            Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar.
+                        </p>
+                        <div class="thumbs">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="Maxwell Admin">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Maxwell Admin">
+                        </div>
+                        <div class="">
+                            <span class="badge badge-pill">Ecommerce</span>
+                            <span class="badge badge-pill">CRM</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="timeline-row">
+                    <div class="timeline-time">
+                        7:45PM<small>Dec 21</small>
+                    </div>
+                    <div class="timeline-content">
+                        <i class="icon-attachment"></i>
+                        <h4>Admin Template!</h4>
+                        <p>Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar, drag &amp; drop and ion slider.</p>
+                        <div class="thumbs">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Maxwell Admin">
+                            <img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Maxwell Admin">
+                        </div>
+                        <div class="">
+                            <span class="badge badge-pill">Orders</span>
+                            <span class="badge badge-pill">Sales</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="timeline-row">
+                    <div class="timeline-content">
+                        <p class="m-0">Loading...</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <!-- Foother -->
+        <footer class="mt-5 p-4 bg-dark text-white text-left" style="box-shadow: #000 0px 0px 10px; width: 100%;">
+            <div class="row">
+                <div class="col">
+                    <h3 style="display: inline-block;" class="mx-3">
+                        Kapcsolat
+                    </h3>
+                    <div class="btn-group">
+                        <a target="_blank" href="https://discord.gg/Uz4p3K88GJ" class="btn btn-discord"><i
+                                class='fab fa-discord'></i></a>
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-gmail dropdown-toggle text-white"
+                                data-bs-toggle="dropdown"><i class="fas fa-envelope-open"></i></button>
+                            <div class="dropdown-menu">
+                                <a target="_blank" class="dropdown-item"
+                                    href="mailto:bazsi5fel2@gmail.com">bazsi5fel2@gmail.com</a>
+                                <a target="_blank" class="dropdown-item"
+                                    href="mailto:bazsi5fel3@gmail.com">bazsi5fel3@gmail.com</a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="https://github.com/BBpezsgo" class="btn btn-github"><i
+                                class='fab fa-github'></i></a>
+                        <a target="_blank" href="https://www.facebook.com/balazs.banszky" class="btn btn-facebook"><i
+                                class='fab fa-facebook'></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 style="display: inline-block;">
+                        Tetszik a weblap?
+                    </h3>
+                    <span style="margin-left: 20px;">
+                        <a href="https://github.com/BBpezsgo/allmyprograms.github.io" target="_blank">Adj egy
+                            csillagot</a> a GitHub-on!
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- On load event -->
+    <script>
+        function OnLoad() {
+            document.getElementsByClassName("header")[0].classList.add("header-loaded")
+        }
+    </script>
+
+    <!-- Modal -->
+    <script>
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        function OpenModal() {
+            modal.style.display = "block";
+            document.getElementById('blur').classList.add('blur');
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+            document.getElementById('blur').classList.remove('blur');
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.getElementById('blur').classList.remove('blur');
+            }
+        }
+    </script>
+
+    <!-- Tooltips -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    <!-- Fade in on scroll -->
+    <script>
+        window.addEventListener("scroll", reveal);
+
+        // To check the scroll position on page load
+        reveal();
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+    </script>
+
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+
+</html>
