@@ -62,7 +62,6 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="330" class="bg-secondary" onload="OnLoad()">
-
     <div id="nothing-transation-background" class="nothing-transation-background"></div>
 
     <div id="blur">
@@ -331,7 +330,7 @@
                             <i class='fas fa-external-link-alt'></i>
                             Weboldal
                         </button>
-                        <button type="button" class="btn btn-outline-secondary disabled" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
                             data-bs-target="#myModal2">
                             Hibajelentés
                         </button>
@@ -1004,12 +1003,16 @@
                 </p>
                 <ul class="horizontal-list">
                     <li>
-                        <a target="_blank" href="http://www.longtion.com/autorunenterpriseii/autorunpro.htm" data-bs-toggle="tooltip" title="AutoRun Pro Enterprise II 6.0">
-                            <img src="used-programs/autorunproenterpriseii_i.png" class="used-program-icon" alt="AutoRun Pro Enterprise II 6.0 icon">
+                        <a target="_blank" href="http://www.longtion.com/autorunenterpriseii/autorunpro.htm"
+                            data-bs-toggle="tooltip" title="AutoRun Pro Enterprise II 6.0">
+                            <img src="used-programs/autorunproenterpriseii_i.png" class="used-program-icon"
+                                alt="AutoRun Pro Enterprise II 6.0 icon">
                         </a>
                     </li>
                 </ul>
-                <a download href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6aeb0da011c539bf%2153961&authkey=ANCfcC4d32PW9z4" class="btn btn-outline-success"><i class='fas fa-download'></i>
+                <a download
+                    href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6aeb0da011c539bf%2153961&authkey=ANCfcC4d32PW9z4"
+                    class="btn btn-outline-success"><i class='fas fa-download'></i>
                     Letöltés</a>
             </div>
 
@@ -1080,13 +1083,13 @@
                 <!-- Modal body -->
                 <div class="modal-body modal-bs">
                     <div id="nothingerroruploadform">
-                        <form action="" method="post">
+                        <form onsubmit="PostError(); return false" method="post">
                             <div class="mb-3 mt-3">
-                                <label for="title">Téma:</label>
-                                <input class="form-control" type="text" id="title" name="name"
+                                <label for="nothingerroruploadformtitle">Téma:</label>
+                                <input class="form-control" type="text" id="nothingerroruploadformtitle" name="name"
                                     placeholder="Kidobodt a játék">
-                                <label for="desc">Részletek:</label>
-                                <input class="form-control" type="text" id="desc" name="desc"
+                                <label for="nothingerroruploadformdesc">Részletek:</label>
+                                <input class="form-control" type="text" id="nothingerroruploadformdesc" name="desc"
                                     placeholder="Amikor elmentettem a játékmenetet, kidobodt a játék. Többjátékos módban játszottam.">
                             </div>
                             <input class="btn btn-primary" type="submit" value="Feltölt">
@@ -1096,6 +1099,12 @@
                         <i class="fas fa-check-circle text-success" style="font-size: 32px; display: inline;"></i>
                         <h2 style="display: inline;">Köszönjük a feltöltést!</h2>
                         <h4>Igyekszünk mihamarabb kijavítani a hibát.</h4>
+                        <div id="nothingerroruploaddonespinner">
+                            <img width="32" height="32" src="icons/spinner.gif" style="display: inline-block;">
+                            Feltöltés...
+                            <!--<h4><span id="nothingerroruploaddonecode"></span></h4>-->
+                        </div>
+                        <button class="btn btn-primary" onclick="PostErrorGoBack()">Vissza</button>
                     </div>
                 </div>
 
@@ -1106,8 +1115,9 @@
     <!-- On load event -->
     <script>
         function OnLoad() {
-            ResetDownloadButtons();
+            ResetDownloadButtons()
             document.getElementsByClassName("header")[0].classList.add("header-loaded")
+            SomeoneVisitedTheSite()
         }
     </script>
 
@@ -1335,15 +1345,112 @@
         }
     </script>
 
+    <!-- Post Error -->
     <script>
+        function PostError() {
+            const title = document.getElementById('nothingerroruploadformtitle').value
+            const desc = document.getElementById('nothingerroruploadformdesc').value
+            const stateElement = document.getElementById('nothingerroruploaddonecode')
+            const spinner = document.getElementById('nothingerroruploaddonespinner')
+
+            var xhr = new XMLHttpRequest()
+            xhr.onreadystatechange = function () {
+                const state = {
+                    0: 'UNSENT',
+                    1: 'OPENED',
+                    2: 'HEADERS_RECEIVED',
+                    3: 'LOADING',
+                    4: 'DONE'
+                }
+                //stateElement.innerText = 'readyState:' + state[xhr.readyState] + ' statusText: ' + xhr.statusText + ' status: ' + xhr.status
+                if (xhr.readyState == 4) {
+                    spinner.style.display = 'none'
+                } else {
+                    spinner.style.display = 'block'
+                }
+            }
+            xhr.open("POST", 'https://api.trello.com/1/cards/?idList=611ba64551bb0c148d9fdf55&token=17cef7936d186e3b194f785997689386fc6467700cd75352428aee0ed36c4581&key=16160910964e82904e57646c84c9fb69&name=' + title + '&desc=' + desc, true)
+            xhr.setRequestHeader('Content-Type', 'application/json')
+            xhr.send()
+        }
+
         const form = document.querySelector('form');
         const thankYouMessage = document.getElementById("nothingerroruploaddone");
         const formBody = document.getElementById("nothingerroruploadform");
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
+            e.preventDefault()
             thankYouMessage.style.display = "block"
             formBody.style.display = "none"
-        });
+        })
+
+        function PostErrorGoBack() {
+            thankYouMessage.style.display = "none"
+            formBody.style.display = "block"
+            document.getElementById('nothingerroruploadformtitle').value = ''
+            document.getElementById('nothingerroruploadformdesc').value = ''
+        }
+    </script>
+
+    <!-- Get Browser -->
+    <script>
+        function GetBrowser() {
+            let userAgent = navigator.userAgent
+            let browserName
+            if (userAgent.match(/chrome|chromium|crios/i)) {
+                browserName = "chrome"
+            } else if (userAgent.match(/firefox|fxios/i)) {
+                browserName = "firefox"
+            } else if (userAgent.match(/safari/i)) {
+                browserName = "safari"
+            } else if (userAgent.match(/opr\//i)) {
+                browserName = "opera"
+            } else if (userAgent.match(/edg/i)) {
+                browserName = "edge"
+            } else {
+                browserName = "No browser detection";
+            }
+            return browserName
+        }
+
+    </script>
+
+    <!-- Someone Visited The Site -->
+    <script>
+        function SomeoneVisitedTheSite() {
+            const browser = GetBrowser()
+            const os = getOS()
+            const date = new Date(Date.now())
+
+            const labelId = '62baafc10439dd29311bfd46'
+
+            const listId = '62baaf7ce73a84408e99e2c0'
+
+            var xmlHttp = new XMLHttpRequest()
+            xmlHttp.open("GET", 'https://api.ipify.org/', false)
+            xmlHttp.send(null)
+            const ip = xmlHttp.responseText
+
+            const title = 'Valaki meglátogatotta az oldalt'
+            const desc =
+                '- Date: ' + date.toString() +
+                '%0A- Browser: ' + browser +
+                '%0A- OS: ' + os +
+                '%0A- IP: ' + ip
+
+            var xhr = new XMLHttpRequest()
+            xhr.open("POST",
+                'https://api.trello.com/1/cards/?' +
+                'idList=' + listId +
+                '&token=17cef7936d186e3b194f785997689386fc6467700cd75352428aee0ed36c4581' +
+                '&key=16160910964e82904e57646c84c9fb69' +
+                '&name=' + title +
+                '&desc=' + desc +
+                '&idLabels=' + labelId +
+                '&pos=top'
+                , true)
+            xhr.setRequestHeader('Content-Type', 'application/json')
+            xhr.send()
+        }
     </script>
 
     <script>
