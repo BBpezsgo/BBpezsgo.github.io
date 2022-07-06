@@ -16,7 +16,15 @@ a:not(#output-html>li) {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a:not(:link) {
     cursor: default;
 }
 
@@ -35,6 +43,29 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 
 .used-program-icon:hover {
     transform: translate(0px, -2px);
+}
+
+.used-language-icon {
+    width: 1em;
+    height: 1em;
+    -webkit-filter: drop-shadow(5px 5px 5px #0005);
+    filter: drop-shadow(5px 5px 5px #0005);
+    transition-duration: 200ms;
+}
+
+.used-language-icon:hover {
+    transform: translate(0px, -2px);
+}
+
+.used-languages {
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    transform: translateY(-2px);
+}
+
+ul.used-languages > li {
+  display: inline;
 }
 
 .mc-mod-icon {
@@ -109,18 +140,20 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     height: 10px;
     box-shadow: #0002 5px 0px 3px inset;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-    background: #8d8d8d; 
+    background: #8d8d8d;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #cacaca; 
+    background: #cacaca;
 }
+
 ::-webkit-scrollbar-corner {
     height: 0px;
-  }
+}
+
 /* Modal */
 .modal:not(.modal-bs) {
     display: none;
@@ -130,14 +163,14 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     -webkit-animation-name: fadeIn;
     -webkit-animation-duration: 0.4s;
     animation-name: fadeIn;
     animation-duration: 0.4s;
-  }
-  
+}
+
 .modal-content2 {
     position: fixed;
     bottom: 0 !important;
@@ -147,45 +180,71 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     animation-duration: 0.4s;
     margin-bottom: -1px;
 }
-  
+
 .close:not(.modal-bs) {
     float: left;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
-  
+
 .modal-header:not(.modal-bs) {
     padding: 2px 16px;
 }
-  
-.modal-body:not(.modal-bs) {padding: 2px 16px;}
-    
+
+.modal-body:not(.modal-bs) {
+    padding: 2px 16px;
+}
+
 @-webkit-keyframes slideIn {
-    from {bottom: -300px; opacity: 0} 
-    to {bottom: 0; opacity: 1}
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
-  
+
 @keyframes slideIn {
-    from {bottom: -300px; opacity: 0}
-    to {bottom: 0; opacity: 1}
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
-  
+
 @-webkit-keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
-  
+
 @keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* Header */
 .header {
     padding: 30px 0px;
     background-image: url(header.png);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     transition-duration: 100ms;
     opacity: 0;
@@ -209,11 +268,13 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 .popover {
     background-color: #000;
 }
+
 .popover-header {
     background-color: #0000;
     color: #fff;
     padding: 6px;
 }
+
 .popover-body {
     background-color: #0000;
     color: #fffe;
@@ -221,6 +282,7 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     padding-top: 0px;
     padding-bottom: 6px;
 }
+
 .bs-popover-top>.popover-arrow::after {
     border-top-color: #000;
 }
@@ -241,12 +303,15 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     margin-bottom: 10px;
     transition: text-shadow 200ms;
 }
+
 .nothing-news-openclose-button:hover {
     text-shadow: #fff 0px 0px 5px;
 }
+
 .nothing-news-openclose-button:hover>.nothing-news-button-icon:not(.opened) {
     transform: translateY(5px);
 }
+
 .nothing-news-openclose-button:hover>.nothing-news-button-icon.opened {
     transform: translateY(-5px) rotate(180deg);
 }
@@ -256,6 +321,7 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
     overflow: scroll;
     transition: max-height 500ms;
 }
+
 .nothing-news.hide {
     max-height: 0px;
     overflow: hidden;
@@ -269,13 +335,15 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 .nothing-news-button-icon.opened {
     transform: rotate(180deg);
 }
+
 .nothing-news::-webkit-scrollbar {
-  width: 5px !important; 
-  box-shadow: none !important; 
+    width: 5px !important;
+    box-shadow: none !important;
 }
+
 .nothing-news::-webkit-scrollbar-thumb {
-  background: #8d8d8d !important; 
-  border-radius: 2px !important;
+    background: #8d8d8d !important;
+    border-radius: 2px !important;
 }
 
 .modal-content.modal-bs>* {
@@ -307,17 +375,17 @@ h1, h2, h3, h4, h5, h6, p, li, a:not(:link) {
 }
 
 body {
-	background: linear-gradient(to bottom, #899197, #968057, #384581, #2b6194, #704024 );
-	background-size: 100%;
-	background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #899197, #968057, #384581, #2b6194, #704024);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
-body:before{
-	content:'';
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	z-index: -1;
-	background: linear-gradient(to right bottom, rgba(255,255,255,0.2), #73797e 75%);
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #73797e 75%);
 }
