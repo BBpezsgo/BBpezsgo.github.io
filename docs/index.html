@@ -1295,7 +1295,7 @@
         function OnLoad() {
             ResetDownloadButtons()
             document.getElementsByClassName("header")[0].classList.add("header-loaded")
-            SomeoneVisitedTheSite()
+            Analyze()
         }
     </script>
 
@@ -1350,6 +1350,8 @@
             }
         }
     </script>
+    
+    <script src="analysis.js"></script>
 
     <!-- Supported OS -->
     <script>
@@ -1407,9 +1409,6 @@
             }
 
             return os;
-        }
-        function detect() {
-            alert(`Device OS is: ${getOS()}`)
         }
     </script>
 
@@ -1566,67 +1565,6 @@
             formBody.style.display = "block"
             document.getElementById('nothingerroruploadformtitle').value = ''
             document.getElementById('nothingerroruploadformdesc').value = ''
-        }
-    </script>
-
-    <!-- Get Browser -->
-    <script>
-        function GetBrowser() {
-            let userAgent = navigator.userAgent
-            let browserName
-            if (userAgent.match(/chrome|chromium|crios/i)) {
-                browserName = "chrome"
-            } else if (userAgent.match(/firefox|fxios/i)) {
-                browserName = "firefox"
-            } else if (userAgent.match(/safari/i)) {
-                browserName = "safari"
-            } else if (userAgent.match(/opr\//i)) {
-                browserName = "opera"
-            } else if (userAgent.match(/edg/i)) {
-                browserName = "edge"
-            } else {
-                browserName = "No browser detection";
-            }
-            return browserName
-        }
-    </script>
-
-    <!-- Someone Visited The Site -->
-    <script>
-        function SomeoneVisitedTheSite() {
-            const browser = GetBrowser()
-            const os = getOS()
-            const date = new Date(Date.now())
-
-            const labelId = '62baafc10439dd29311bfd46'
-
-            const listId = '62baaf7ce73a84408e99e2c0'
-
-            var xmlHttp = new XMLHttpRequest()
-            xmlHttp.open("GET", 'https://api.ipify.org/', false)
-            xmlHttp.send(null)
-            const ip = xmlHttp.responseText
-
-            const title = 'Valaki meglátogatotta az oldalt'
-            const desc =
-                '- Date: ' + date.toString() +
-                '%0A- Browser: ' + browser +
-                '%0A- OS: ' + os +
-                '%0A- IP: ' + ip
-
-            var xhr = new XMLHttpRequest()
-            xhr.open("POST",
-                'https://api.trello.com/1/cards/?' +
-                'idList=' + listId +
-                '&token=17cef7936d186e3b194f785997689386fc6467700cd75352428aee0ed36c4581' +
-                '&key=16160910964e82904e57646c84c9fb69' +
-                '&name=' + title +
-                '&desc=' + desc +
-                '&idLabels=' + labelId +
-                '&pos=top'
-                , true)
-            xhr.setRequestHeader('Content-Type', 'application/json')
-            xhr.send()
         }
     </script>
 
