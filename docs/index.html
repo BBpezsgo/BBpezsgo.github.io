@@ -274,7 +274,14 @@
                                 <a target="_blank" href="https://onedrive.live.com/" data-bs-placement="top"
                                     title="OneDrive" data-bs-toggle="popover" data-bs-trigger="hover"
                                     data-bs-content='Felhőtárhely a játéknak, verziószámnak, és az egyéb adatoknak'>
-                                    <img src="used-programs/onedrive.png" class="used-program-icon" alt="Discord icon">
+                                    <img src="used-programs/onedrive.png" class="used-program-icon" alt="OneDrive icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://playfab.com/" data-bs-placement="top"
+                                    title="PlayFab" data-bs-toggle="popover" data-bs-trigger="hover"
+                                    data-bs-content='Authorization'>
+                                    <img src="used-programs/playfab.png" class="used-program-icon" alt="PlayFab icon">
                                 </a>
                             </li>
                         </ul>
@@ -1621,7 +1628,7 @@
         }
 
         function GetTimeEllapes(dateNum) {
-            var val = Math.floor((Date.now() - dateNum) / 1000 / 60 / 60 / 24)
+            var val = Math.floor(((new Date(Date.now())) - (new Date(dateNum))) / 1000 / 60 / 60 / 24)
             if (val == 0) {
                 return "ma"
             } else if (val == 1) {
@@ -1633,7 +1640,7 @@
                     val = Math.floor(val / oneMonth)
                     suffix = " hónapja"
                 }
-                if (val >= 12) {
+                if (Math.floor(val / oneMonth) >= 12) {
                     val = Math.floor(val / 12)
                     suffix = " éve"
                 }
