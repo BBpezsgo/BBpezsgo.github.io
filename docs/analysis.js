@@ -291,7 +291,7 @@ function Analyze() {
             '&token=84de6f5cbc9e3fb5df77596358352cc839e1dea58d8dbb0857919f39b6143acf' +
             '&key=16160910964e82904e57646c84c9fb69' +
             '&name=' + urlParameter('Valaki meglátogatta az oldalt') +
-            '&desc=' + '`' + urlParameter(data) + '`' +
+            '&desc=' + '```' + urlParameter(data) + '```' +
             '&idLabels=' + labelId +
             '&pos=top'
             , true)
