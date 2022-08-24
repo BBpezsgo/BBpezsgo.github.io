@@ -1613,6 +1613,9 @@
             const ultimateprog = document.getElementById("dates-ultimateprog")
             const webbrowser = document.getElementById("dates-webbrowser")
             const imgslicer = document.getElementById("dates-imgslicer")
+            const mcp_0 = document.getElementById("dates-mcp-0")
+            const mcp_12 = document.getElementById("dates-mcp-12")
+            const mcp_18 = document.getElementById("dates-mcp-18")
 
             const listOfDates = str.split("\n")
             for (let i = 0; i < listOfDates.length; i++) {
@@ -1632,6 +1635,12 @@
                         imgslicer.innerText = GetTimeEllapes(Date.parse(modifyDate))
                     } else if (program == "ultimateprog") {
                         ultimateprog.innerText = GetTimeEllapes(Date.parse(modifyDate))
+                    } else if (program == "mcp-0") {
+                        mcp_0.innerText = GetTimeEllapes(Date.parse(modifyDate))
+                    } else if (program == "mcp-12") {
+                        mcp_12.innerText = GetTimeEllapes(Date.parse(modifyDate))
+                    } else if (program == "mcp-18") {
+                        mcp_18.innerText = GetTimeEllapes(Date.parse(modifyDate))
                     }
                 }
             }
