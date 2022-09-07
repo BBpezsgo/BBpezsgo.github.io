@@ -91,6 +91,9 @@
                             <a class="nav-link" href="#nothing">Nothing</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#userstylesheet">User Stylesheet</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#github">GitHub projectek</a>
                         </li>
                         <li class="nav-item">
@@ -106,7 +109,7 @@
                             <a class="nav-link" href="#mcpacks">Minecraft resource pack-ok</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#firstprogram">Az első GUI-el rendelkező alkalmazásom</a>
+                            <a class="nav-link" href="#firstprogram">Az első GUI alkalmazásom</a>
                         </li>
                     </ul>
                 </div>
@@ -161,7 +164,7 @@
                             </li>
                         </ul>
                         <div class="btn-group">
-                            <a download
+                            <a download target="_blank"
                                 href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
                                 class="btn btn-outline-success downloadbutton platform-windows">
                                 <i class='fas fa-download'></i>
@@ -171,10 +174,10 @@
                                 <button type="button" class="btn btn-outline-success downloadbutton dropdown-toggle"
                                     data-bs-toggle="dropdown"></button>
                                 <div class="dropdown-menu">
-                                    <a download class="dropdown-item platform-windows"
+                                    <a download target="_blank" class="dropdown-item platform-windows"
                                         href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212462&authkey=AOSqFj7hI33_6XI">
                                         Csak a játék letöltése</a>
-                                    <a download class="dropdown-item platform-windows"
+                                    <a download target="_blank" class="dropdown-item platform-windows"
                                         href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212461&authkey=AIHPJJRvtQeCy64">
                                         Zenefájl letöltése</a>
                                 </div>
@@ -314,7 +317,7 @@
                                 </td>
                                 <td>
                                     <div class="btn-group">
-                                        <a download
+                                        <a download target="_blank"
                                             href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
                                             class="btn btn-outline-success downloadbutton platform-windows">
                                             <i class='fas fa-download'></i>
@@ -326,7 +329,7 @@
                                                 data-bs-toggle="dropdown">
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a download class="dropdown-item platform-windows"
+                                                <a download target="_blank" class="dropdown-item platform-windows"
                                                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212452&authkey=APH5Cx2kgxy66K0">
                                                     Csak a játék letöltése
                                                 </a>
@@ -341,7 +344,7 @@
                                             style="transform: translateY(-1px);">Android:</span>
                                 </td>
                                 <td>
-                                    <a download
+                                    <a download target="_blank"
                                         href="https://drive.google.com/u/0/uc?id=1-n0A7jxUD3VUYQnIX3dpE8aV3dGSdn7V&export=download&confirm=t"
                                         class="btn btn-outline-success downloadbutton platform-android">
                                         <i class='fas fa-download'></i>
@@ -381,13 +384,49 @@
                 </div>
             </div>
 
+            <!-- User Stylesheet -->
+            <div id="userstylesheet" class="container bg-dark text-white py-2 mt-5 reveal container-background">
+                <h1>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/1200px-Google_Chrome_icon_%28September_2014%29.svg.png" class="program-icon" alt="chrome icon">
+                    Chrome User Stylesheet bővítmény
+                    <ul class="horizontal-list used-languages">
+                        <li>
+                            <span data-bs-toggle="tooltip" title="Visual Basic">
+                                <img src="./languages/js.png"
+                                    class="used-language-icon" alt="Visual Basic icon">
+                            </span>
+                        </li>
+                    </ul>
+                </h1>
+                <p>
+                    Egyszerűen hozhatsz létre saját stíluslapokat külön webhelyekhez.
+                </p>
+                <ul>
+                    <li>Elkezdtem: 2022. augusztus 16-án</li>
+                </ul>
+                <p>
+                    Ezeket használtam:
+                </p>
+                <ul class="horizontal-list">
+                    <li>
+                        <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
+                            title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
+                            data-bs-content="Kódszerkesztő">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" class="used-program-icon" alt="VS Code icon">
+                        </a>
+                    </li>
+                </ul>
+                <a target="_blank" href="https://github.com/BBpezsgo/Google-Chrome-User-Stylesheet"
+                    class="btn btn-outline-primary"><i class='fas fa-external-link-alt'></i> Reposity</a>
+            </div>
+
             <!-- GitHub -->
             <div id="github" class="mt-5 container bg-dark text-white py-2 reveal container-background" style="
             background-image: linear-gradient(#0005,  #1e1735), url(https://github.blog/wp-content/uploads/2020/12/2-2.png?resize=1024%2C613);
             background-size:cover;
             background-position: center;
             ">
-                <h1><i class='fab fa-github program-icon'></i>GitHub projectek</h1>
+                <h1><i class='fab fa-github program-icon'></i>Egyéb GitHub projectek</h1>
                 <div class="row">
                     <div class="col-md-6" style="margin-bottom: 20px;">
                         <h4>
@@ -781,7 +820,7 @@
                         mellé.
                     </li>
                 </ul>
-                <a download
+                <a download target="_blank"
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212451&authkey=AFzYV0LKRZtbX9k"
                     class="btn btn-outline-success downloadbutton platform-windows">
                     <i class='fas fa-download'></i>
@@ -832,7 +871,7 @@
                         </a>
                     </li>
                 </ul>
-                <a download
+                <a download target="_blank"
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212455&authkey=AMBglOd0g4X_DqY"
                     class="btn btn-outline-success downloadbutton platform-windows">
                     <i class='fas fa-download'></i>
@@ -859,7 +898,7 @@
                 <table>
                     <tr>
                         <td style="width: 50px;">1.0</td>
-                        <td style="padding-right: 20px;"><a download
+                        <td style="padding-right: 20px;"><a download target="_blank"
                             href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212456&authkey=ADiIpQzipc5pSSQ"
                             class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
                             Letöltés</a></td>
@@ -868,7 +907,7 @@
                     </tr>
                     <tr>
                         <td>1.12</td>
-                        <td><a download
+                        <td><a download target="_blank"
                             href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212459&authkey=AEIQnGxv3lZOiuY"
                             class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
                             Letöltés</a></td>
@@ -944,7 +983,7 @@
                     </tr>
                     <tr>
                         <td>1.18</td>
-                        <td><a download
+                        <td><a download target="_blank"
                             href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212458&authkey=AJYyfL1qiRtFbMI"
                             class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
                             Letöltés</a></td>
