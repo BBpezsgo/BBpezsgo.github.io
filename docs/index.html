@@ -424,6 +424,95 @@
                     class="btn btn-outline-primary"><i class='fas fa-external-link-alt'></i> Reposity</a>
             </div>
 
+            <!-- BBCode -->
+            <div id="bbcode" class="container bg-dark text-white py-2 mt-5 reveal container-background">
+                <h1>
+                    BBCode: Saját programozási nyelv
+                    <ul class="horizontal-list used-languages">
+                        <li>
+                            <span data-bs-toggle="tooltip" title="C#">
+                                <img src="./languages/cs.png" class="used-language-icon" alt="C# icon">
+                            </span>
+                        </li>
+                    </ul>
+                </h1>
+                <ul>
+                    <li>Elkezdtem: 2022. február 27-én</li>
+                </ul>
+                <p>
+                    Hogy lefuttass egy állományt, csak társítsd a letöltött programot a fájlhoz.
+                </p>
+                <p>
+                    <h5>Szintaktika:</h5>
+                    <p class="bbcode-code">
+                        // Using<br>
+                        using System;<br><br>
+
+                        // Változó<br>
+                        int foo = 5;<br><br>
+
+                        // Függvény<br>
+                        void Foo(int arg) {<br><br>
+
+                        }<br><br>
+
+                        // Függvény attribútummal<br>
+                        [CodeEntry]<br>
+                        void Start() {<br><br>
+
+                        }<br><br>
+
+                        // Struct<br>
+                        struct Foo {<br>
+                            TB // Struct változó<br>
+                            TB int foo;<br>
+                            TB // Metódus<br>
+                            TB void Foo(int arg) {<br><br>
+
+                            TB };<br>
+                        }<br><br>
+
+                        // Elágazás<br>
+                        if (foo == 5) {<br><br>
+                            
+                        } elseif (foo == 5) {<br><br>
+                            
+                        } else {<br><br>
+                            
+                        }<br><br>
+
+                        // For<br>
+                        for (int i = 0; i &lt; 10; i++) {<br><br>
+                            
+                        }<br><br>
+
+                        // While<br>
+                        while (true) {<br><br>
+                            
+                        }<br><br>
+                    </p>
+                </p>
+                <p>
+                    Ezeket használtam:
+                </p>
+                <ul class="horizontal-list">
+                    <li>
+                        <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
+                            title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
+                            data-bs-content="Kódszerkesztő, debugger">
+                            <img src="used-programs/visualstudio2022.png" class="used-program-icon"
+                                alt="VS 2022 icon">
+                        </a>
+                    </li>
+                </ul>
+                <a download
+                    href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%2153979&authkey=AB-_RBd-SC-FnC8"
+                    class="btn btn-outline-success downloadbutton platform-windows">
+                    <i class='fas fa-download'></i>
+                    Letöltés
+                </a>
+            </div>
+
             <!-- GitHub -->
             <div id="github" class="mt-5 container bg-dark text-white py-2 reveal container-background" style="
             background-image: linear-gradient(#0005,  #1e1735), url(https://github.blog/wp-content/uploads/2020/12/2-2.png?resize=1024%2C613);
@@ -1708,6 +1797,8 @@
             }
         }
     </script>
+
+    <script src="./bbc-syntax.js"></script>
 </body>
 
 </html>

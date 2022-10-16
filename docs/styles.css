@@ -389,3 +389,32 @@ body:before {
     z-index: -1;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #73797e 75%);
 }
+
+.bbcode-code {
+    background-color: #222;
+    color: #eee;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: Consolas, 'Courier New', monospace;
+    font-weight: 600;
+    user-select: text;
+    max-height: 400px;
+    overflow-y: scroll;
+    border: #666 2px solid;
+}
+
+.bbcode-code .keyw {
+    color: #0f5be7;
+}
+
+.bbcode-code .func {
+    color: #c4cc4d;
+}
+
+.bbcode-code .var {
+    color: #5cc5f5;
+}
+
+.bbcode-code .comm {
+    color: #398d28;
+}

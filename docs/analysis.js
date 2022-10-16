@@ -5,6 +5,16 @@ visitsNum += 1
 
 setCookie('visits', visitsNum, 10)
 
+const detect = (base, if_installed, if_not_installed) => {
+    const s = document.createElement('script')
+    s.onerror = if_not_installed
+    s.onload = if_installed
+    document.body.appendChild(s)
+    s.src = 'chrome-extension://' + base + '/manifest.json'
+}
+
+detect('cjpalhdlnbpafiamejdnhcphjbkeiagm', () => { console.log('xd') }, () => { console.log(':(') })
+
 function Analyze() {
     const labelId = '62baafc10439dd29311bfd46'
 
