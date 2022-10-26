@@ -1,23 +1,14 @@
-var visits = getCookie('visits')
-visits = '0' + visits
-var visitsNum = Number.parseInt(visits)
-visitsNum += 1
+function OnVisit() {
+    var visits = GetCookie('visits')
+    visits = '0' + visits
+    var visitsNum = Number.parseInt(visits)
+    visitsNum += 1
 
-setCookie('visits', visitsNum, 10)
-
-const detect = (base, if_installed, if_not_installed) => {
-    const s = document.createElement('script')
-    s.onerror = if_not_installed
-    s.onload = if_installed
-    document.body.appendChild(s)
-    s.src = 'chrome-extension://' + base + '/manifest.json'
+    SetCookie('visits', visitsNum, 10)    
 }
-
-detect('cjpalhdlnbpafiamejdnhcphjbkeiagm', () => { console.log('xd') }, () => { console.log(':(') })
 
 function Analyze() {
     const labelId = '62baafc10439dd29311bfd46'
-
     const listId = '62baaf7ce73a84408e99e2c0'
 
     const PerformanceNavigationType = {
@@ -154,7 +145,7 @@ function Analyze() {
     }
 
     try { info.visitsIn10Days = visitsNum } catch (ex) { }
-    try { info.visitsIn10Days = getCookie('visits') } catch (ex) { }
+    try { info.visitsIn10Days = GetCookie('visits') } catch (ex) { }
 
     try {
         var xmlHttp = new XMLHttpRequest()
@@ -174,7 +165,7 @@ function Analyze() {
         info.ipAddress = 'Timed out'
     } catch (ex) { }
 
-    try { info.os = getOS() } catch (ex) { }
+    try { info.os = GetOS() } catch (ex) { }
 
     try { info.timeOpened = new Date() } catch (ex) { }
     try { info.timeOpened = new Date().toString() } catch (ex) { }
@@ -300,8 +291,8 @@ function Analyze() {
             'idList=' + listId +
             '&token=84de6f5cbc9e3fb5df77596358352cc839e1dea58d8dbb0857919f39b6143acf' +
             '&key=16160910964e82904e57646c84c9fb69' +
-            '&name=' + urlParameter('Valaki meglátogatta az oldalt') +
-            '&desc=' + '```' + urlParameter(data) + '```' +
+            '&name=' + UrlParameter('Valaki meglátogatta az oldalt') +
+            '&desc=' + '```' + UrlParameter(data) + '```' +
             '&idLabels=' + labelId +
             '&pos=top'
             , true)
@@ -312,56 +303,51 @@ function Analyze() {
 
 function GetBrowser() {
     let userAgent = navigator.userAgent
-    let browserName
     if (userAgent.match(/chrome|chromium|crios/i)) {
-        browserName = "Chrome"
+        return "Chrome"
     } else if (userAgent.match(/firefox|fxios/i)) {
-        browserName = "Firefox"
+        return "Firefox"
     } else if (userAgent.match(/safari/i)) {
-        browserName = "Safari"
+        return "Safari"
     } else if (userAgent.match(/opr\//i)) {
-        browserName = "Opera"
+        return "Opera"
     } else if (userAgent.match(/edg/i)) {
-        browserName = "Edge"
+        return "Edge"
     } else {
-        browserName = "?";
+        return "?";
     }
-    return browserName
 }
 
-function getOS() {
+function GetOS() {
     var userAgent = window.navigator.userAgent,
         platform = window.navigator.platform,
         macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
         windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-        os = null;
+        iosPlatforms = ['iPhone', 'iPad', 'iPod'];
 
     if (macosPlatforms.indexOf(platform) !== -1) {
-        os = 'MacOS';
+        return 'MacOS';
     } else if (iosPlatforms.indexOf(platform) !== -1) {
-        os = 'iOS';
+        return 'iOS';
     } else if (windowsPlatforms.indexOf(platform) !== -1) {
-        os = 'Windows';
+        return 'Windows';
     } else if (/Android/.test(userAgent)) {
-        os = 'Android';
-    } else if (!os && /Linux/.test(platform)) {
-        os = 'Linux';
+        return 'Android';
+    } else if (/Linux/.test(platform)) {
+        return 'Linux';
     } else {
-        os = '?'
+        return '?'
     }
-
-    return os;
 }
 
-function setCookie(name, value, expireDays) {
+function SetCookie(name, value, expireDays) {
     const d = new Date();
     d.setTime(d.getTime() + (expireDays * 24 * 60 * 60 * 1000));
     let expires = "expires=" + d.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-function getCookie(name) {
+function GetCookie(name) {
     let name_ = name + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
@@ -377,35 +363,33 @@ function getCookie(name) {
     return '';
 }
 
-function urlParameter(parameterValue) {
+function UrlParameter(parameterValue) {
     var data = parameterValue
-    data = replaceAll(data, '\\`', '%60')
-    data = replaceAll(data, '\t', '%09')
-    data = replaceAll(data, '\n', '%0A')
-    data = replaceAll(data, '\\ ', '%20')
-    data = replaceAll(data, '\\"', '%22')
-    data = replaceAll(data, '\\,', '%2C')
-    data = replaceAll(data, '\\:', '%3A')
-    data = replaceAll(data, '\\;', '%3B')
-    data = replaceAll(data, '\\{', '%7B')
-    data = replaceAll(data, '\\}', '%7D')
-    data = replaceAll(data, '\\/', '%2F')
-    data = replaceAll(data, '\\[', '%5B')
-    data = replaceAll(data, '\\]', '%5D')
-    data = replaceAll(data, '\\+', '%2B')
-    data = replaceAll(data, '\\í', '%C3%AD')
-    data = replaceAll(data, '\\ö', '%C3%B6')
-    data = replaceAll(data, '\\ó', '%C3%B3')
-    data = replaceAll(data, '\\ü', '%C3%BC')
-    data = replaceAll(data, '\\é', '%C3%A9')
-    data = replaceAll(data, '\\á', '%C3%A1')
-    data = replaceAll(data, '\\ú', '%C3%BA')
-    data = replaceAll(data, '\\ű', '%C5%B1')
-    data = replaceAll(data, '\\ő', '%C5%91')
-    data = replaceAll(data, '[^a-zA-Z0-9\\-\\_\\.\\~\\%\\(\\)]', '%20')
+    data = ReplaceAll(data, '\\`', '%60')
+    data = ReplaceAll(data, '\t', '%09')
+    data = ReplaceAll(data, '\n', '%0A')
+    data = ReplaceAll(data, '\\ ', '%20')
+    data = ReplaceAll(data, '\\"', '%22')
+    data = ReplaceAll(data, '\\,', '%2C')
+    data = ReplaceAll(data, '\\:', '%3A')
+    data = ReplaceAll(data, '\\;', '%3B')
+    data = ReplaceAll(data, '\\{', '%7B')
+    data = ReplaceAll(data, '\\}', '%7D')
+    data = ReplaceAll(data, '\\/', '%2F')
+    data = ReplaceAll(data, '\\[', '%5B')
+    data = ReplaceAll(data, '\\]', '%5D')
+    data = ReplaceAll(data, '\\+', '%2B')
+    data = ReplaceAll(data, '\\í', '%C3%AD')
+    data = ReplaceAll(data, '\\ö', '%C3%B6')
+    data = ReplaceAll(data, '\\ó', '%C3%B3')
+    data = ReplaceAll(data, '\\ü', '%C3%BC')
+    data = ReplaceAll(data, '\\é', '%C3%A9')
+    data = ReplaceAll(data, '\\á', '%C3%A1')
+    data = ReplaceAll(data, '\\ú', '%C3%BA')
+    data = ReplaceAll(data, '\\ű', '%C5%B1')
+    data = ReplaceAll(data, '\\ő', '%C5%91')
+    data = ReplaceAll(data, '[^a-zA-Z0-9\\-\\_\\.\\~\\%\\(\\)]', '%20')
     return data
 }
 
-function replaceAll(str, find, replace) {
-    return str.replace(new RegExp(find, 'g'), replace);
-}
+function ReplaceAll(string, find, replace) { return string.replace(new RegExp(find, 'g'), replace) }

@@ -2,9 +2,7 @@
 /docs/package.json
 /docs/package-lock.json
 /docs/sass
-/docs/old.html
-/docs/stylesold.css
-/docs/win95.css
 /docs/trello-url.txt
 /docs/timeline.css
 /docs/timeline.html
+docs/old/
