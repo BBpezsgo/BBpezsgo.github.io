@@ -1406,6 +1406,51 @@
         </div>
     </div>
 
+    <!-- Who the fuck are you modal -->
+    <div class="modal modal-bs" id="prove-human-form">
+        <div class="modal-dialog">
+            <div class="modal-content modal-bs">
+
+                <!-- Modal Header -->
+                <div class="modal-header modal-bs">
+                    <h4 class="modal-title">Wait...</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body modal-bs">
+                    <div id="prove-human-form-body">
+                        <p>Who the hell are you???</p>
+                        <p>You shouldn't be looking at this page because I didn't share the link.</p>
+                        <p>But once you're here...</p>
+                        <form onsubmit="ProveHuman(); return false" method="post">
+                            <div class="mb-3 mt-3">
+                                <label for="prove-human-answer">Are you a human?</label>
+                                <input class="form-control" type="text" id="prove-human-answer" name="name"
+                                    placeholder="No I'm a robot :(">
+                                <label for="prove-human-prove">If yes, prove it: (idk how)</label>
+                                <input class="form-control" type="text" id="prove-human-prove" name="desc"
+                                    placeholder="">
+                            </div>
+                            <input class="btn btn-primary" type="submit" value="OK">
+                        </form>
+                    </div>
+                    <div id="prove-human-upload-done" style="display: none;">
+                        <i class="fas fa-check-circle text-success" style="font-size: 32px; display: inline;"></i>
+                        <h2 style="display: inline;">Okay</h2>
+                        <h4>Thanks.</h4>
+                        <div id="prove-human-upload-done-spinner">
+                            <img width="32" height="32" src="./img/icons/spinner.gif" style="display: inline-block;">
+                            Uploading...
+                        </div>
+                        <button class="btn btn-primary" onclick="modal2.style.display='none';document.getElementById('blur').classList.remove('blur');">OK</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script src="./js/analysis.js"></script>
 
     <!-- OnLoad -->
@@ -1415,6 +1460,75 @@
             document.getElementsByClassName("header")[0].classList.add("header-loaded")
             OnVisit()
             Analyze()
+            InitProveHumanModal()
+        }
+    </script>
+
+    <script>
+        function InitProveHumanModal() {
+            const modal2 = document.getElementById("prove-human-form");
+            const span = modal2.getElementsByClassName("btn-close")[0];
+
+            modal2.style.display = "block";
+            document.getElementById('blur').classList.add('blur');
+
+            span.onclick = function () {
+                ProveHumanDismiss()
+                modal2.style.display="none";
+                document.getElementById('blur').classList.remove('blur');
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                    document.getElementById('blur').classList.remove('blur');
+                }
+            }
+
+            const form = document.querySelector('#prove-human-form-body form');
+            const thankYouMessage = document.getElementById("prove-human-upload-done");
+            const formBody = document.getElementById("prove-human-form-body");
+            form.addEventListener('submit', (e) => {
+                e.preventDefault()
+                document.querySelector('#prove-human-form .modal-title').style.display = 'none'
+                thankYouMessage.style.display = "block"
+                formBody.style.display = "none"
+            })
+        }
+
+        function ProveHuman() {
+            const title = document.getElementById('prove-human-answer').value
+            const desc = document.getElementById('prove-human-prove').value
+            const spinner = document.getElementById('prove-human-upload-done-spinner')
+
+            const xhr = new XMLHttpRequest()
+            xhr.onreadystatechange = function () {
+                const state = {
+                    0: 'UNSENT',
+                    1: 'OPENED',
+                    2: 'HEADERS_RECEIVED',
+                    3: 'LOADING',
+                    4: 'DONE'
+                }
+                if (xhr.readyState == 4) {
+                    spinner.style.display = 'none'
+                } else {
+                    spinner.style.display = 'block'
+                }
+            }
+
+            xhr.open("POST", 'https://api.trello.com/1/cards/?idList=6362a372ef956c01233b798f&token=84de6f5cbc9e3fb5df77596358352cc839e1dea58d8dbb0857919f39b6143acf&key=16160910964e82904e57646c84c9fb69&name=' + title + '&desc=' + desc, true)
+            xhr.setRequestHeader('Content-Type', 'application/json')
+            xhr.send()
+        }
+    
+        function ProveHumanDismiss() {            
+            const title = 'Someone dismissed the human-prove form'
+            const desc = 'at ' + new Date().toString()
+            const xhr = new XMLHttpRequest()
+            xhr.open("POST", 'https://api.trello.com/1/cards/?idList=6362a372ef956c01233b798f&token=84de6f5cbc9e3fb5df77596358352cc839e1dea58d8dbb0857919f39b6143acf&key=16160910964e82904e57646c84c9fb69&name=' + title + '&desc=' + desc, true)
+            xhr.setRequestHeader('Content-Type', 'application/json')
+            xhr.send()
         }
     </script>
 
