@@ -1443,7 +1443,7 @@
                             <img width="32" height="32" src="./img/icons/spinner.gif" style="display: inline-block;">
                             Uploading...
                         </div>
-                        <button class="btn btn-primary" onclick="modal2.style.display='none';document.getElementById('blur').classList.remove('blur');">OK</button>
+                        <button class="btn btn-primary" onclick="HideProveHumanModal()">OK</button>
                     </div>
                 </div>
 
@@ -1465,7 +1465,17 @@
     </script>
 
     <script>
+        function HideProveHumanModal() {
+            document.getElementById("prove-human-form").style.display = "none";
+            document.getElementById('blur').classList.remove('blur');
+        }
+
         function InitProveHumanModal() {
+            const provedCookie = GetCookie('proved')
+            
+            if (provedCookie === 'dismissed' || provedCookie === '') { } else
+            { return }
+
             const modal2 = document.getElementById("prove-human-form");
             const span = modal2.getElementsByClassName("btn-close")[0];
 
@@ -1474,14 +1484,13 @@
 
             span.onclick = function () {
                 ProveHumanDismiss()
-                modal2.style.display="none";
-                document.getElementById('blur').classList.remove('blur');
+                HideProveHumanModal()
             }
 
             window.onclick = function (event) {
                 if (event.target == modal2) {
-                    modal2.style.display = "none";
-                    document.getElementById('blur').classList.remove('blur');
+                    ProveHumanDismiss()
+                    HideProveHumanModal()
                 }
             }
 
@@ -1497,6 +1506,7 @@
         }
 
         function ProveHuman() {
+            SetCookie('proved', 'proved', 365)
             const title = document.getElementById('prove-human-answer').value
             const desc = document.getElementById('prove-human-prove').value
             const spinner = document.getElementById('prove-human-upload-done-spinner')
@@ -1522,7 +1532,8 @@
             xhr.send()
         }
     
-        function ProveHumanDismiss() {            
+        function ProveHumanDismiss() {
+            SetCookie('proved', 'dismissed', 365)
             const title = 'Someone dismissed the human-prove form'
             const desc = 'at ' + new Date().toString()
             const xhr = new XMLHttpRequest()
