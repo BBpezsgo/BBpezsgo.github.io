@@ -1427,7 +1427,7 @@
                             <div class="mb-3 mt-3">
                                 <label for="prove-human-answer">Are you a human?</label>
                                 <input class="form-control" type="text" id="prove-human-answer" name="name"
-                                    placeholder="No I'm a robot :(">
+                                    placeholder="No I'm a robot :(" required>
                                 <label for="prove-human-prove">If yes, prove it: (idk how)</label>
                                 <input class="form-control" type="text" id="prove-human-prove" name="desc"
                                     placeholder="">
@@ -1535,7 +1535,7 @@
         function ProveHumanDismiss() {
             SetCookie('proved', 'dismissed', 365)
             const title = 'Someone dismissed the human-prove form'
-            const desc = 'at ' + new Date().toString()
+            const desc = 'on site allmyprograms.github.io at ' + new Date().toString()
             const xhr = new XMLHttpRequest()
             xhr.open("POST", 'https://api.trello.com/1/cards/?idList=6362a372ef956c01233b798f&token=84de6f5cbc9e3fb5df77596358352cc839e1dea58d8dbb0857919f39b6143acf&key=16160910964e82904e57646c84c9fb69&name=' + title + '&desc=' + desc, true)
             xhr.setRequestHeader('Content-Type', 'application/json')
