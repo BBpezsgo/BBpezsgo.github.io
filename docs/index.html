@@ -130,8 +130,53 @@
         <!-- Main -->
         <div class="main-content container mt-5">
 
+            <!-- User Stylesheet -->
+            <div id="prove-human-section" class="container bg-dark text-white py-2 mt-5 reveal container-background">
+                <h1>
+                    Wait...
+                </h1>
+                <p>
+                    Who are you?<br>
+                    You shouldn't be looking at this page because I didn't share the link.<br>
+                    But once you're here...
+                </p>
+                <form onsubmit="ProveHumanSection(); return false" method="post">
+                    <div class="mb-3 mt-3">
+                        <label for="prove-human-section-answer">Are you a human?</label>
+                        <input class="form-control" type="text" id="prove-human-section-answer" name="name" maxlength="64" style="width: unset;" placeholder="No I'm a robot :(" required>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="OK">
+                </form>
+
+                <script>
+                    function HideProveHumanSection() {
+                        document.getElementById("prove-human-section").style.display = "none"
+                    }
+            
+                    function InitProveHumanSection() {
+                        const provedCookie = GetCookie('proved')                        
+                        if (provedCookie === 'dismissed' || provedCookie === '') { return }            
+                        HideProveHumanSection()
+                        reveal()
+                    }
+            
+                    function ProveHumanSection() {
+                        SetCookie('proved', 'proved', 365)
+                        const title = document.getElementById('prove-human-section-answer').value
+                        const desc = `at ${new Date(Date.now()).toString()}`
+            
+                        const xhr = new XMLHttpRequest()            
+                        xhr.open("POST", 'https://api.trello.com/1/cards/?idList=6362a372ef956c01233b798f&token=84de6f5cbc9e3fb5df77596358352cc839e1dea58d8dbb0857919f39b6143acf&key=16160910964e82904e57646c84c9fb69&name=' + title + '&desc=' + desc, true)
+                        xhr.setRequestHeader('Content-Type', 'application/json')
+                        xhr.send()
+
+                        HideProveHumanSection()
+                    }
+                </script>
+            </div>
+
             <!-- Nothing -->
-            <div id="nothing" class="container bg-dark text-white py-2 reveal container-background" style="
+            <div id="nothing" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
             background-image: linear-gradient(#0005,  #292621), url('./img/nothing-background.webp');
             background-size: 256px;
             ">
@@ -1458,9 +1503,10 @@
         function OnLoad() {
             ResetDownloadButtons()
             document.getElementsByClassName("header")[0].classList.add("header-loaded")
-            OnVisit()
-            Analyze()
+            // OnVisit()
+            // Analyze()
             // InitProveHumanModal()
+            InitProveHumanSection()
         }
     </script>
 
