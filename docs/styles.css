@@ -38,11 +38,15 @@ a:not(:link) {
     height: 32px;
     -webkit-filter: drop-shadow(5px 5px 5px #0005);
     filter: drop-shadow(5px 5px 5px #0005);
-    transition-duration: 200ms;
+    transition: transform 200ms;
 }
 
 .used-program-icon:hover {
-    transform: translate(0px, -2px);
+    transform: scale(1.1);
+}
+
+.used-program-icon:active {
+    transform: scale(.9);
 }
 
 .used-language-icon {
@@ -50,11 +54,11 @@ a:not(:link) {
     height: 1em;
     -webkit-filter: drop-shadow(5px 5px 5px #0005);
     filter: drop-shadow(5px 5px 5px #0005);
-    transition-duration: 200ms;
+    transition: transform 200ms;
 }
 
 .used-language-icon:hover {
-    transform: translate(0px, -2px);
+    transform: scale(1.1);
 }
 
 .used-languages {

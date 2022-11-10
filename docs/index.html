@@ -55,14 +55,16 @@
             document.onmouseup = reEnable
         }
     </script>
+    <!--
     <script>
         try {
-            // var pageTracker = _gat._getTracker("UA-549331-28");
-            // pageTracker._trackPageview();
+            var pageTracker = _gat._getTracker("UA-549331-28");
+            pageTracker._trackPageview();
         } catch (err) {
 
         }
     </script>
+    -->
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="330" class="bg-secondary" onload="OnLoad()">
@@ -75,7 +77,7 @@
         <!-- Header -->
         <div class="bg-primary text-white text-center header">
             <h1>Bánszky Balázs</h1>
-            <p>Projectek</p>
+            <p>Projects</p>
         </div>
 
         <!-- Navbar -->
@@ -99,10 +101,13 @@
                             <a class="nav-link" href="#userstylesheet">User Stylesheet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#github">GitHub projectek</a>
+                            <a class="nav-link" href="#bbcode">BBCode</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#webbrowser">Webböngésző</a>
+                            <a class="nav-link" href="#github">GitHub projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#webbrowser">Web browser</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#ultimateprogram">Ultimate Program</a>
@@ -111,10 +116,10 @@
                             <a class="nav-link" href="#imageslicer">Image Slicer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#mcpacks">Minecraft resource pack-ok</a>
+                            <a class="nav-link" href="#mcpacks">Minecraft resource packs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#firstprogram">Az első GUI alkalmazásom</a>
+                            <a class="nav-link" href="#firstprogram">First GUI</a>
                         </li>
                     </ul>
                 </div>
@@ -124,13 +129,13 @@
         <div id="main-content" class="py-5 container-fluid text-light"
             style="text-align: center; background: #899197; box-shadow: #555d63 0px 0px 5px inset;">
             <h1>Helo!</h1>
-            <p style="font-size: 1.5em;">Itt megnézheted a projecteket amiken dolgozom, vagy dolgoztam</p>
+            <p style="font-size: 1.5em;">Here you can see the projects I am (or have been) working on</p>
         </div>
 
         <!-- Main -->
         <div class="main-content container mt-5">
 
-            <!-- User Stylesheet -->
+            <!-- Prove Human -->
             <div id="prove-human-section" class="container bg-dark text-white py-2 mt-5 reveal container-background">
                 <h1>
                     Wait...
@@ -181,22 +186,21 @@
             background-size: 256px;
             ">
                 <h1><img src="./img/programs/nothing.png" class="program-icon" alt="Nothing icon">Nothing</h1>
-                <p>
-                    Egy stragégiai játék, ahol lehet építkezni és egységeket gyártani.
-                    Van lehetőség többjátékos módra is.
-                </p>
+                <p>A strategy game.</p>
                 <div class="row">
                     <div class="col-md-6" style="margin-bottom: 20px;">
                         <h4>Nothing<span style="font-size: small;" class="badge bg-secondary">v1</span></h4>
                         <ul>
-                            <li>Elkezdtem: 2019. november 5. előtt valamikor</li>
-                            <li>Módosítva: <span id="dates-nothingv1">?</span></li>
-                            <li><i class='fas fa-exclamation-circle text-danger'></i> <span
-                                    class="warning-title">Figyelem!</span> A játék fejlesztése megszűnt, nem lesz több
-                                frissítés ami több tartalmat ad a játékhoz.</li>
+                            <li>Created sometime before November 5, 2019</li>
+                            <li>Modified <span id="dates-nothingv1">?</span></li>
+                            <li>
+                                <i class='fas fa-exclamation-circle text-danger'></i>
+                                <span class="warning-title">Notice:</span>
+                                The development of the game has stopped, there will be no more updates that add content to the game.
+                            </li>
                         </ul>
                         <p>
-                            Ezeket használtam:
+                            I used these:
                         </p>
                         <ul class="horizontal-list">
                             <li>
@@ -218,7 +222,7 @@
                                 href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
                                 class="btn btn-outline-success downloadbutton platform-windows">
                                 <i class='fas fa-download'></i>
-                                Frissítő letöltése
+                                Download launcher
                             </a>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-outline-success downloadbutton dropdown-toggle"
@@ -226,10 +230,10 @@
                                 <div class="dropdown-menu">
                                     <a download target="_blank" class="dropdown-item platform-windows"
                                         href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212462&authkey=AOSqFj7hI33_6XI">
-                                        Csak a játék letöltése</a>
+                                        Just download the game</a>
                                     <a download target="_blank" class="dropdown-item platform-windows"
                                         href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212461&authkey=AIHPJJRvtQeCy64">
-                                        Zenefájl letöltése</a>
+                                        Download soundtrack</a>
                                 </div>
                             </div>
                         </div>
@@ -259,15 +263,16 @@
                             </ul>
                         </h4>
                         <ul>
-                            <li>Elkezdtem: 2021. február 1-én</li>
-                            <li>Módosítva: <span id="dates-nothingv2">?</span></li>
-                            <li><i class='fas fa-exclamation-circle text-danger'></i> <span
-                                    class="warning-title">Figyelem!</span> A játék fejlesztés alatt áll. A jelenlegi
-                                verzió
-                                nem rendelkezik tartalommal.</li>
+                            <li>Created on February 1, 2021</li>
+                            <li>Modified <span id="dates-nothingv2">?</span></li>
+                            <li>
+                                <i class='fas fa-exclamation-circle text-danger'></i> <span
+                                    class="warning-title">Notice:</span>
+                                The game is under development. The current version does not have much content.
+                            </li>
                         </ul>
                         <p>
-                            Ezeket használtam:
+                            I used these:
                         </p>
                         <ul class="horizontal-list">
                             <li>
@@ -279,7 +284,7 @@
                             <li>
                                 <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
                                     title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
-                                    data-bs-content="Kódszerkesztő, debugger">
+                                    data-bs-content="IDE">
                                     <img src="./img/used-programs/visualstudio2022.webp" class="used-program-icon"
                                         alt="VS 2022 icon">
                                 </a>
@@ -298,20 +303,20 @@
                             <li>
                                 <a target="_blank" href="https://www.photonengine.com/pun" data-bs-placement="top"
                                     title="Photon PUN" data-bs-toggle="popover" data-bs-trigger="hover"
-                                    data-bs-content="Többjátékos mód online szerverekkel">
+                                    data-bs-content="Multiplayer mode with online servers">
                                     <img src="./img/used-programs/photon.webp" class="used-program-icon" alt="Photon icon">
                                 </a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://firebase.google.com/" data-bs-placement="top"
                                     title="Firebase" data-bs-toggle="popover" data-bs-trigger="hover"
-                                    data-bs-content="A játékos főbb adatainak elmentése a Google szerverein">
+                                    data-bs-content="Saving the player's main data on Google's servers">
                                     <img src="./img/used-programs/firebase.webp" class="used-program-icon" alt="Firebase icon">
                                 </a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://trello.com" data-bs-placement="top" title="Trello API"
-                                    data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Hibajelentés">
+                                    data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Reports">
                                     <img src="./img/used-programs/trello.webp" class="used-program-icon" alt="Trello icon">
                                 </a>
                             </li>
@@ -319,14 +324,14 @@
                                 <a target="_blank" href="https://discord.com/developers/docs/game-sdk/sdk-starter-guide"
                                     data-bs-placement="top" title="Discord game SDK" data-bs-toggle="popover"
                                     data-bs-trigger="hover"
-                                    data-bs-content='"Rich presence", barátok meghívása a játékba a Discordról'>
+                                    data-bs-content='Rich presence, invite friends to the game from Discord'>
                                     <img src="./img/used-programs/discord.webp" class="used-program-icon" alt="Discord icon">
                                 </a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://onedrive.live.com/" data-bs-placement="top"
                                     title="OneDrive" data-bs-toggle="popover" data-bs-trigger="hover"
-                                    data-bs-content='Felhőtárhely a játéknak, verziószámnak, és az egyéb adatoknak'>
+                                    data-bs-content='Cloud storage for the game, version number and other data'>
                                     <img src="./img/used-programs/onedrive.webp" class="used-program-icon" alt="OneDrive icon">
                                 </a>
                             </li>
@@ -341,20 +346,20 @@
                         <div style="height: 20px;"></div>
                         <ul>
                             <li>
-                                <i class="fas fa-info-circle text-secondary"></i> Megfelelő internetkapcsolat kell a
-                                program futtatásához
+                                <i class="fas fa-info-circle text-secondary"></i>
+                                A suitable internet connection is required to run the program
                             </li>
                             <li>
-                                <i class="fas fa-info-circle text-secondary"></i> A program nagyobb fájlokat tölt le és
-                                telepít
+                                <i class="fas fa-info-circle text-secondary"></i>
+                                The program downloads and installs larger files
                             </li>
                             <li>
-                                <i class="fas fa-exclamation-circle text-danger"></i> Az Androidos változat tesztverzió!
-                                A Discord SDK nem elérhető a platformon.
+                                <i class="fas fa-exclamation-circle text-danger"></i>
+                                The Android version is a test version! The Discord SDK is not available on the platform.
                             </li>
                             <li>
-                                <i class="fas fa-exclamation-triangle text-warning"></i> Androidon nincs automatikus
-                                frissítés. Az újabb verziókat manuálisan kell letölteni és telepíteni.
+                                <i class="fas fa-exclamation-triangle text-warning"></i>
+                                There is no automatic update on Android. Newer versions must be downloaded and installed manually.
                             </li>
                         </ul>
                         <table style="margin-bottom: 10px;">
@@ -371,7 +376,7 @@
                                             href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212453&authkey=AKaz2TB9zzdgAJg"
                                             class="btn btn-outline-success downloadbutton platform-windows">
                                             <i class='fas fa-download'></i>
-                                            Frissítő letöltése
+                                            Download launcher
                                         </a>
                                         <div class="btn-group">
                                             <button type="button"
@@ -381,7 +386,7 @@
                                             <div class="dropdown-menu">
                                                 <a download target="_blank" class="dropdown-item platform-windows"
                                                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212452&authkey=APH5Cx2kgxy66K0">
-                                                    Csak a játék letöltése
+                                                    Just download the game
                                                 </a>
                                             </div>
                                         </div>
@@ -400,7 +405,7 @@
                                         href="https://drive.google.com/u/0/uc?id=1-n0A7jxUD3VUYQnIX3dpE8aV3dGSdn7V&export=download&confirm=t"
                                         class="btn btn-outline-success downloadbutton platform-android">
                                         <i class='fas fa-download'></i>
-                                        APK letöltése</a>
+                                        Download APK</a>
                                 </td>
                             </tr>
                         </table>
@@ -412,11 +417,11 @@
                                 500)
                             " class="btn btn-outline-secondary">
                             <i class='fas fa-external-link-alt'></i>
-                            Weboldal
+                            Website
                         </button>
                         <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
                             data-bs-target="#myModal2">
-                            Hibajelentés
+                            Report an issue
                         </button>
                     </div>
                 </div>
@@ -424,7 +429,7 @@
                     <div class="nothing-news-openclose-button" onclick="NothingShowCloseNews()">
                         <i id="nothingnewsopenclosebuttonarrow"
                             class="fas fa-angle-double-down nothing-news-button-icon"></i>
-                        Hírek
+                        News
                     </div>
                     <div id="nothingnewsbody" class="nothing-news hide">
                         <div id="output-html">
@@ -440,7 +445,7 @@
             <div id="userstylesheet" class="container bg-dark text-white py-2 mt-5 reveal container-background">
                 <h1>
                     <img src="./img/programs/chrome.png" class="program-icon" alt="chrome icon">
-                    Chrome User Stylesheet bővítmény
+                    Chrome User Stylesheet extension
                     <ul class="horizontal-list used-languages">
                         <li>
                             <span data-bs-toggle="tooltip" title="Visual Basic">
@@ -451,19 +456,19 @@
                     </ul>
                 </h1>
                 <p>
-                    Egyszerűen hozhatsz létre saját stíluslapokat külön webhelyekhez.
+                    You can easily create your own style sheets for individual websites.
                 </p>
                 <ul>
-                    <li>Elkezdtem: 2022. augusztus 16-án</li>
+                    <li>Created on August 16, 2022</li>
                 </ul>
                 <p>
-                    Ezeket használtam:
+                    I used these:
                 </p>
                 <ul class="horizontal-list">
                     <li>
-                        <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
-                            title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
-                            data-bs-content="Kódszerkesztő">
+                        <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
+                            title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
+                            data-bs-content="IDE">
                             <img src="./img/used-programs/vscode.webp" class="used-program-icon" alt="VS Code icon">
                         </a>
                     </li>
@@ -475,7 +480,7 @@
             <!-- BBCode -->
             <div id="bbcode" class="container bg-dark text-white py-2 mt-5 reveal container-background">
                 <h1>
-                    BBCode: Saját programozási nyelv
+                    BBCode: A programming language
                     <ul class="horizontal-list used-languages">
                         <li>
                             <span data-bs-toggle="tooltip" title="C#">
@@ -485,19 +490,19 @@
                     </ul>
                 </h1>
                 <ul>
-                    <li>Elkezdtem: 2022. február 27-én</li>
+                    <li>Created on February 27, 2022</li>
                 </ul>
                 <p>
-                    Hogy lefuttass egy állományt, csak társítsd a letöltött programot a fájlhoz.
+                    To run a file, just associate the downloaded program with the file.
                 </p>
                 <p>
-                    Ezeket használtam:
+                    I used these:
                 </p>
                 <ul class="horizontal-list">
                     <li>
                         <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
                             title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
-                            data-bs-content="Kódszerkesztő, debugger">
+                            data-bs-content="IDE">
                             <img src="./img/used-programs/visualstudio2022.webp" class="used-program-icon"
                                 alt="VS 2022 icon">
                         </a>
@@ -507,17 +512,18 @@
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%2153979&authkey=AB-_RBd-SC-FnC8"
                     class="btn btn-outline-success downloadbutton platform-windows">
                     <i class='fas fa-download'></i>
-                    Letöltés
+                    Download
                 </a>
                 <a download
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%2153980&authkey=AN_IDsq91Qdoj08"
                     class="btn btn-outline-secondary downloadbutton platform-windows">
                     <i class='fas fa-download'></i>
-                    Beépített függvények letöltése
+                    Download built-in function definitions
                 </a>
                 <a
                     href="https://github.com/BBpezsgo/Interpreter" target="_blank"
-                    class="btn btn-outline-primary"><i class='fas fa-external-link-alt'></i> Reposity
+                    class="btn btn-outline-primary"><i class='fas fa-external-link-alt'></i>
+                    Reposity
                 </a>
             </div>
 
@@ -527,7 +533,7 @@
             background-size:cover;
             background-position: center;
             ">
-                <h1><i class='fab fa-github program-icon'></i>Egyéb GitHub projectek</h1>
+                <h1><i class='fab fa-github program-icon'></i>Other projects on GitHub</h1>
                 <div class="row">
                     <div class="col-md-6" style="margin-bottom: 20px;">
                         <h4>
@@ -584,28 +590,30 @@
                             </ul>
                         </h4>
                         <ul>
-                            <li>Elkezdtem: 2020. július 29-én</li>
-                            <li>Feltöltöttem: 2022. január 5-én</li>
+                            <li>Created on July 29, 2020</li>
+                            <li>Uploaded: on January 5, 2022</li>
                         </ul>
                         <p>
-                            Ezeket használtam:
+                            I used these:
                         </p>
                         <ul class="horizontal-list">
                             <li>
                                 <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
                                     title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
-                                    data-bs-content="Kódszerkesztő">
+                                    data-bs-content="IDE">
                                     <img src="./img/used-programs/vscode.webp"
                                         class="used-program-icon" alt="VS Code icon">
                                 </a>
                             </li>
                         </ul>
-                        <a target="_blank" href="https://github.com/BBpezsgo/DiscordBot"
-                            class="btn btn-outline-primary"><i class='fas fa-external-link-alt'></i> Reposity</a>
+                        <a target="_blank" href="https://github.com/BBpezsgo/DiscordBot" class="btn btn-outline-primary">
+                            <i class='fas fa-external-link-alt'></i>
+                            Reposity
+                        </a>
                     </div>
                     <div class="col-md-6" style="margin-bottom: 20px;">
                         <h4>
-                            Python Tutorial
+                            Python Tutorial <img src="./img-not-optimized/school.png" width="24px" height="24px" title="School project" alt="School project">
                             <ul class="horizontal-list used-languages">
                                 <li>
                                     <span data-bs-toggle="tooltip" title="JavaScript">
@@ -628,10 +636,10 @@
                             </ul>
                         </h4>
                         <ul>
-                            <li>Elkezdtük: 2021. november 30-án</li>
+                            <li>We started on November 30, 2021</li>
                         </ul>
                         <p>
-                            Segítettek:
+                            Helped me:
                         </p>
                         <ul>
                             <li>
@@ -642,13 +650,13 @@
                             </li>
                         </ul>
                         <p>
-                            Ezeket használtuk:
+                            We used these:
                         </p>
                         <ul class="horizontal-list">
                             <li>
                                 <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
                                     title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
-                                    data-bs-content="Kódszerkesztő">
+                                    data-bs-content="IDE">
                                     <img src="./img/used-programs/vscode.webp"
                                         class="used-program-icon" alt="VS Code icon">
                                 </a>
@@ -662,13 +670,19 @@
                             </li>
                         </ul>
                         <a target="_blank" href="https://github.com/BBpezsgo/DDGB.PythonTutorial.io"
-                            class="btn btn-outline-primary"><i class='fas fa-external-link-alt'></i> Reposity</a>
+                            class="btn btn-outline-primary">
+                            <i class='fas fa-external-link-alt'></i>
+                            Reposity
+                        </a>
                         <a target="_blank" href="https://bbpezsgo.github.io/DDGB.PythonTutorial.io/"
-                            class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weblap</a>
+                            class="btn btn-outline-secondary">
+                            <i class='fas fa-external-link-alt'></i>
+                            Website
+                        </a>
                     </div>
                     <div class="col-md-6" style="margin-bottom: 20px;">
                         <h4>
-                            GSZI Map
+                            GSZI Map <img src="./img-not-optimized/school.png" width="24px" height="24px" title="School project" alt="School project">
                             <ul class="horizontal-list used-languages">
                                 <li>
                                     <span data-bs-toggle="tooltip" title="JavaScript">
@@ -691,10 +705,10 @@
                             </ul>
                         </h4>
                         <ul>
-                            <li>Elkezdtük: 2021. szeptember 14-én</li>
+                            <li>We started on September 14, 2021</li>
                         </ul>
                         <p>
-                            Segítettek:
+                            Helped me:
                         </p>
                         <ul>
                             <li>
@@ -708,13 +722,13 @@
                             </li>
                         </ul>
                         <p>
-                            Ezeket használtuk:
+                            We used these:
                         </p>
                         <ul class="horizontal-list">
                             <li>
                                 <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
                                     title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
-                                    data-bs-content="Kódszerkesztő">
+                                    data-bs-content="IDE">
                                     <img src="./img/used-programs/vscode.webp"
                                         class="used-program-icon" alt="VS Code icon">
                                 </a>
@@ -728,11 +742,11 @@
                         <a target="_blank" href="https://github.com/BBpezsgo/HDRB.GsziMap.io"
                             class="btn btn-outline-primary"><i class='fas fa-external-link-alt'></i> Reposity</a>
                         <a target="_blank" href="https://bbpezsgo.github.io/HDRB.GsziMap.io/"
-                            class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Weblap</a>
+                            class="btn btn-outline-secondary"><i class='fas fa-external-link-alt'></i> Website</a>
                     </div>
                     <div class="col-md-6" style="margin-bottom: 20px;">
                         <h4>
-                            Skills Junior 2022 Webfejlesztő 2. forduló
+                            Skills Junior 2022 Web Developer Competition Round 2
                             <ul class="horizontal-list used-languages">
                                 <li>
                                     <span data-bs-toggle="tooltip" title="JavaScript">
@@ -761,16 +775,16 @@
                             </ul>
                         </h4>
                         <ul>
-                            <li>Elkezdtem: 2022. március 10-én</li>
+                            <li>Created on March 10, 2022</li>
                         </ul>
                         <p>
-                            Ezeket használtam:
+                            I used these:
                         </p>
                         <ul class="horizontal-list">
                             <li>
                                 <a target="_blank" href="https://code.visualstudio.com/" data-bs-placement="top"
                                     title="Visual Studio Code" data-bs-toggle="popover" data-bs-trigger="hover"
-                                    data-bs-content="Kódszerkesztő">
+                                    data-bs-content="IDE">
                                     <img src="./img/used-programs/vscode.webp"
                                         class="used-program-icon" alt="VS Code icon">
                                 </a>
@@ -785,8 +799,8 @@
             <!-- Webbrowser -->
             <div id="webbrowser" class="container bg-dark text-white py-2 mt-5 reveal container-background">
                 <h1>
-                    <img src="./img/programs/browser.png" class="program-icon" alt="Webbrowser icon">
-                    Webböngésző
+                    <img src="./img/programs/browser.png" class="program-icon" alt="Web browser icon">
+                    Web browser
                     <ul class="horizontal-list used-languages">
                         <li>
                             <span data-bs-toggle="tooltip" title="Visual Basic">
@@ -797,21 +811,20 @@
                     </ul>
                 </h1>
                 <p>
-                    Egy rossz webböngésző, ami másra nem jó mint a neve. Vannak beállítások, egyszerű és
-                    alap mód, előzmények, kedvencek.
+                    A bad web browser that is no better than its name. There are settings, simple and basic mode, history, favorites.
                 </p>
                 <ul>
-                    <li>Elkezdtem: 2019. augusztus 5-én</li>
-                    <li>Módosítva: <span id="dates-webbrowser">?</span></li>
+                    <li>Created on August 5, 2019</li>
+                    <li>Modified <span id="dates-webbrowser">?</span></li>
                 </ul>
                 <p>
-                    Ezeket használtam:
+                    I used these:
                 </p>
                 <ul class="horizontal-list">
                     <li>
                         <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
                             title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
-                            data-bs-content="Kódszerkesztő, compiler, debugger">
+                            data-bs-content="IDE">
                             <img src="./img/used-programs/visualstudio2022.webp" class="used-program-icon" alt="VS 2022 icon">
                         </a>
                     </li>
@@ -825,16 +838,15 @@
                 <div style="height: 20px;"></div>
                 <ul>
                     <li>
-                        <i class="fas fa-info-circle text-secondary"></i> Kissebb fájlokat hoz létre az AppData
-                        mappában, és
-                        a program mellé.
+                        <i class="fas fa-info-circle text-secondary"></i>
+                        It creates smaller files in the AppData folder and next to the program.
                     </li>
                 </ul>
                 <a download
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212450&authkey=AAHhouwZBqqkLPg"
                     class="btn btn-outline-success downloadbutton platform-windows">
                     <i class='fas fa-download'></i>
-                    Letöltés
+                    Download
                 </a>
             </div>
 
@@ -857,44 +869,35 @@
                     </ul>
                 </h1>
                 <p>
-                    Ez egy komplexebb program a többinél.<br>
-                    Kilistázza az összes elérhető hálózati
-                    adaptert, megmutatja az aktuális internet státuszokat.
+                    This is a more complex program than the others.<br>
+                    It lists all available network adapters and shows the current internet statuses.
                 </p>
                 <p>
-                    Ha egy adaptert kiválasztunk, kilistázza az
-                    összes megtalálható IP címet, és típus szerint csoportosítja. Az IP címek hostnevüket automatikusan
-                    betölti, majd elmenti. Megmutatja az adapter attribútumait, sebességét, nevét, azonosítóját, és a
-                    leírását.
+                    When an adapter is selected, it lists all available IP addresses and groups them by type. The host names of the IP
+                    addresses are automatically loaded and then saved. Shows adapter attributes, speed, name, ID, and description.
                 </p>
                 <p>
-                    Egy másik fülön megmutatja a csomag-forgalmat az adapteren. Megjeleníti a küldőt, fogadót,
-                    a kapcsolat típusát, és a csomag tartalmát. Mível sok csomag érkezik másodpercenként, van
-                    optimalizáló,
-                    ami kikapcsolja a csomagok listázását, amikor nem látható, de ez kikapcsolható. Ha egy csomag
-                    többször
-                    érkezik meg, azt összeolvasztja, és egy számmal jelzi, hogy gány csomagot olvasztott össze. A
-                    forgalmat
-                    egy grafikonon is megtekinthetjük. A csomagok küldő és fogadó IP címeket összegyűjti, és hozzáadja
-                    az
-                    előző oldal IP cím listájához, ahol kezelhetjük ezeket. Ha egy IP címet kiválasztunk, akkor van
-                    lehetőség a cím pingelésére, és a részletek megtekintésére, ahol le lehet kérdezni a host helyét, a
-                    host
-                    részletesebb nevét, ki lehet listázni az elérhető portokat, majd rá lehet csatlakozni egyre, és
-                    küldhetünk, vagy fogadhatunk üzeneteket.
+                    Another tab shows the packet traffic on the adapter. It displays the sender, receiver, connection type, and package
+                    content. Since there are many packets arriving per second, there is an optimizer that turns off the listing of packets
+                    when it is not visible, but it can be turned off. If a package arrives more than once, it merges them and indicates with
+                    a number that it has merged several packages. The traffic can also be viewed on a graph. It collects the sending and
+                    receiving IP addresses of the packets and adds them to the IP address list on the previous page, where we can manage
+                    them. If an IP address is selected, it is possible to ping the address and view the details, where you can query the
+                    location of the host, the more detailed name of the host, list the available ports, then connect to one and send or
+                    receive messages .
                 </p>
                 <ul>
-                    <li>Elkezdtem: 2021. április 6-án</li>
-                    <li>Módosítva: <span id="dates-ultimateprog">?</span></li>
+                    <li>Created on April 6, 2021</li>
+                    <li>Modified <span id="dates-ultimateprog">?</span></li>
                 </ul>
                 <p>
-                    Ezeket használtam:
+                    I used these:
                 </p>
                 <ul class="horizontal-list">
                     <li>
                         <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
                             title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
-                            data-bs-content="Kódszerkesztő, compiler, debugger">
+                            data-bs-content="IDE">
                             <img src="./img/used-programs/visualstudio2022.webp" class="used-program-icon" alt="VS 2022 icon">
                         </a>
                     </li>
@@ -908,24 +911,23 @@
                 <div style="height: 20px;"></div>
                 <ul>
                     <li>
-                        <i class="fas fa-exclamation-triangle text-warning"></i> Rendszergazdai jogosultság szükséges a
-                        program futtatásához!
+                        <i class="fas fa-exclamation-triangle text-warning"></i>
+                        Administrator privileges are required to run the program!
                     </li>
                     <li>
-                        <i class="fas fa-info-circle text-secondary"></i> Megfelelő internetkapcsolat kell a program
-                        futtatásához.
+                        <i class="fas fa-info-circle text-secondary"></i>
+                        A suitable internet connection is required to run the program.
                     </li>
                     <li>
-                        <i class="fas fa-info-circle text-secondary"></i> Kissebb fájlokat hoz létre és tölt le a
-                        program
-                        mellé.
+                        <i class="fas fa-info-circle text-secondary"></i>
+                        It creates and downloads smaller files next to the program.
                     </li>
                 </ul>
                 <a download target="_blank"
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212451&authkey=AFzYV0LKRZtbX9k"
                     class="btn btn-outline-success downloadbutton platform-windows">
                     <i class='fas fa-download'></i>
-                    Letöltés
+                    Download
                 </a>
             </div>
 
@@ -948,20 +950,20 @@
                     </ul>
                 </h1>
                 <p>
-                    Ez a program szét tudja szeletelni a megadott képet, majd el lehet menteni egyessével egy mappába.
+                    This program can slice the specified image, and then save them one by one in a folder.
                 </p>
                 <ul>
-                    <li>Elkezdtem: 2021. április 28-án</li>
-                    <li>Módosítva: <span id="dates-imgslicer">?</span></li>
+                    <li>Created on April 28, 2021</li>
+                    <li>Modified <span id="dates-imgslicer">?</span></li>
                 </ul>
                 <p>
-                    Ezeket használtam:
+                    I used these:
                 </p>
                 <ul class="horizontal-list">
                     <li>
                         <a target="_blank" href="https://visualstudio.microsoft.com/vs/" data-bs-placement="top"
                             title="Visual Studio 2022" data-bs-toggle="popover" data-bs-trigger="hover"
-                            data-bs-content="Kódszerkesztő, compiler, debugger">
+                            data-bs-content="IDE">
                             <img src="./img/used-programs/visualstudio2022.webp" class="used-program-icon" alt="VS 2022 icon">
                         </a>
                     </li>
@@ -976,18 +978,18 @@
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212455&authkey=AMBglOd0g4X_DqY"
                     class="btn btn-outline-success downloadbutton platform-windows">
                     <i class='fas fa-download'></i>
-                    Letöltés
+                    Download
                 </a>
             </div>
 
             <!-- MC packs -->
             <div id="mcpacks" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
-            background-size: 32px;
+            background-size: 48px;
             background-image: linear-gradient(#0005,  #3a291c), url('./img/mc-background.png');
             ">
-                <h1>Minecraft resource pack-ok</h1>
+                <h1>Minecraft resource packs</h1>
                 <p>
-                    Ezeket használtam:
+                    I used these:
                 </p>
                 <ul class="horizontal-list">
                     <li>
@@ -1000,7 +1002,7 @@
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%2153982&authkey=AHScKgyMKg29jvA"
                     class="btn btn-outline-success downloadbutton platform-windows">
                     <i class='fas fa-download'></i>
-                    Kezelő letöltése
+                    Download pack manager
                 </a>
                 <table>
                     <tr>
@@ -1008,8 +1010,8 @@
                         <td style="padding-right: 20px;"><a download target="_blank"
                             href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212456&authkey=ADiIpQzipc5pSSQ"
                             class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
-                            Letöltés</a></td>
-                        <td>Módosítva: <span id="dates-mcp-0">?</span></td>
+                            Download</a></td>
+                        <td>Modified <span id="dates-mcp-0">?</span></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -1017,8 +1019,8 @@
                         <td><a download target="_blank"
                             href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212459&authkey=AEIQnGxv3lZOiuY"
                             class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
-                            Letöltés</a></td>
-                        <td>Módosítva: <span id="dates-mcp-12">?</span></td>
+                            Download</a></td>
+                        <td>Modified <span id="dates-mcp-12">?</span></td>
                         <td>
                             <ul class="horizontal-list inline">
                                 <li>
@@ -1093,8 +1095,8 @@
                         <td><a download target="_blank"
                             href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6AEB0DA011C539BF%212458&authkey=AJYyfL1qiRtFbMI"
                             class="btn btn-outline-success btn-sm downloadbutton"><i class='fas fa-download'></i>
-                            Letöltés</a></td>
-                        <td>Módosítva: <span id="dates-mcp-18">?</span></td>
+                            Download</a></td>
+                        <td>Modified <span id="dates-mcp-18">?</span></td>
                         <td>
                             <ul class="horizontal-list inline">
                             <li>
@@ -1317,13 +1319,13 @@
 
             <!-- First program -->
             <div id="firstprogram" class="mt-5 container bg-dark text-white py-2 reveal container-background">
-                <h1>Az első GUI-el rendelkező alkalmazásom</h1>
+                <h1>My first app with a GUI</h1>
                 <ul>
-                    <li>Elkezdtem: ?</li>
-                    <li>Befejeztem: 2018. július 25-én <span style="display: none;">19:16:38-kor</span></li>
+                    <li>Created on (idk)</li>
+                    <li>Finished on July 25, 2018 <span style="display: none;">at 19:16:38</span></li>
                 </ul>
                 <p>
-                    Ezeket használtam:
+                    I used these:
                 </p>
                 <ul class="horizontal-list">
                     <li>
@@ -1337,7 +1339,7 @@
                 <a download
                     href="https://onedrive.live.com/download?cid=6AEB0DA011C539BF&resid=6aeb0da011c539bf%2153961&authkey=ANCfcC4d32PW9z4"
                     class="btn btn-outline-success"><i class='fas fa-download'></i>
-                    Letöltés</a>
+                    Download</a>
             </div>
 
         </div>
@@ -1347,11 +1349,39 @@
             <div class="row">
                 <div class="col">
                     <h3 style="display: inline-block;" class="mx-3">
-                        Kapcsolat
+                        Contact
                     </h3>
                     <div class="btn-group">
-                        <a target="_blank" href="https://discord.gg/Uz4p3K88GJ" class="btn btn-discord" aria-label="Discord guild invitation"><i
-                                class='fab fa-discord'></i></a>
+                        <style>
+                            input[type=text].dropdown-item {
+                                border: 0;
+                                border-radius: 4px;
+                            }
+
+                            input[type=text].dropdown-item.active, input[type=text].dropdown-item:active {
+                                color: #212529;
+                                background-color: transparent;
+                            }
+
+                            .dropdown-item[type=text]:focus {
+                                outline: 3px solid #0d6efd;
+                                background-color: #e9ecef !important;
+                            }
+                        </style>
+
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-discord dropdown-toggle text-white"
+                            style="border-radius: .25rem 0px 0px .25rem;"
+                                data-bs-toggle="dropdown" aria-label="Discord"><i class="fab fa-discord"></i></button>
+                            <div class="dropdown-menu">
+                                <!--
+                                <a target="_blank" class="dropdown-item"
+                                    href="https://discord.gg/Uz4p3K88GJ" aria-label="Guild invitation">Guild invitation</a>
+                                -->
+                                <input type="text" class="dropdown-item" aria-label="Profile" title="ID: 726127512521932880" value="User0057#0057" readonly>
+                            </div>
+                        </div>
+                        
                         <div class="btn-group dropup">
                             <button type="button" class="btn btn-gmail dropdown-toggle text-white"
                                 data-bs-toggle="dropdown" aria-label="Show emails"><i class="fas fa-envelope-open"></i></button>
@@ -1370,11 +1400,12 @@
                 </div>
                 <div class="col">
                     <h3 style="display: inline-block;">
-                        Tetszik a weblap?
+                        Do you like the website?
                     </h3>
                     <span style="margin-left: 20px;">
-                        <a href="https://github.com/BBpezsgo/BBpezsgo.github.io" target="_blank">Adj egy
-                            csillagot</a> a GitHub-on!
+                        <a href="https://github.com/BBpezsgo/BBpezsgo.github.io" target="_blank">
+                            Give a star</a>
+                        on GitHub!
                     </span>
                 </div>
             </div>
@@ -1386,10 +1417,10 @@
         <div class="modal" style="display: block;">
             <div class="modal-content container-sm bg-dark text-light">
                 <div class="modal-header">
-                    <h2 class="modal-title">Figyelem!</h2>
+                    <h2 class="modal-title">Attention!</h2>
                 </div>
                 <div class="modal-body">
-                    <p>A JavaScript le van tiltva, vagy nem támogatott a webböngésződön.</p>
+                    <p>JavaScript is disabled or not supported on your web browser.</p>
                 </div>
             </div>
         </div>
@@ -1399,11 +1430,11 @@
     <div id="myModal" class="modal">
         <div class="modal-content container-sm bg-dark text-light">
             <div class="modal-header">
-                <h2 class="modal-title">Figyelem!</h2>
+                <h2 class="modal-title">Attention!</h2>
                 <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-                <p>A legtöbb programot csak Windows os-re lehet letölteni.</p>
+                <p>Most programs can only be downloaded for Windows OS.</p>
             </div>
         </div>
     </div>
@@ -1415,7 +1446,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header modal-bs">
-                    <h4 class="modal-title">Hibajelentés</h4>
+                    <h4 class="modal-title">Report issue</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
@@ -1424,26 +1455,26 @@
                     <div id="nothingerroruploadform">
                         <form onsubmit="PostError(); return false" method="post">
                             <div class="mb-3 mt-3">
-                                <label for="nothingerroruploadformtitle">Téma:</label>
+                                <label for="nothingerroruploadformtitle">Topic:</label>
                                 <input class="form-control" type="text" id="nothingerroruploadformtitle" name="name"
-                                    placeholder="Kidobodt a játék">
-                                <label for="nothingerroruploadformdesc">Részletek:</label>
+                                    placeholder="The game crashed">
+                                <label for="nothingerroruploadformdesc">Details:</label>
                                 <input class="form-control" type="text" id="nothingerroruploadformdesc" name="desc"
-                                    placeholder="Amikor elmentettem a játékmenetet, kidobodt a játék. Többjátékos módban játszottam.">
+                                    placeholder="When I saved my gameplay, the game crashed. I played in multiplayer mode.">
                             </div>
-                            <input class="btn btn-primary" type="submit" value="Feltölt">
+                            <input class="btn btn-primary" type="submit" value="Upload">
                         </form>
                     </div>
                     <div id="nothingerroruploaddone" style="display: none;">
                         <i class="fas fa-check-circle text-success" style="font-size: 32px; display: inline;"></i>
-                        <h2 style="display: inline;">Köszönjük a feltöltést!</h2>
-                        <h4>Igyekszünk mihamarabb kijavítani a hibát.</h4>
+                        <h2 style="display: inline;">Thanks for the report!</h2>
+                        <h4>I will try to fix the error as soon as possible.</h4>
                         <div id="nothingerroruploaddonespinner">
                             <img width="32" height="32" src="./img/icons/spinner.gif" style="display: inline-block;">
-                            Feltöltés...
+                            Uploading...
                             <!--<h4><span id="nothingerroruploaddonecode"></span></h4>-->
                         </div>
-                        <button class="btn btn-primary" onclick="PostErrorGoBack()">Vissza</button>
+                        <button class="btn btn-primary" onclick="PostErrorGoBack()">Back</button>
                     </div>
                 </div>
 
@@ -1589,29 +1620,6 @@
         }
     </script>
 
-    <!-- Modal -->
-    <script>
-        var modal = document.getElementById("myModal");
-        var span = document.getElementsByClassName("close")[0];
-
-        function OpenModal() {
-            modal.style.display = "block";
-            document.getElementById('blur').classList.add('blur');
-        }
-
-        span.onclick = function () {
-            modal.style.display = "none";
-            document.getElementById('blur').classList.remove('blur');
-        }
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                document.getElementById('blur').classList.remove('blur');
-            }
-        }
-    </script>
-
     <!-- Tooltips -->
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -1649,7 +1657,6 @@
                 SetButtonsEnabled(true, "platform-windows")
             } else {
                 SetButtonsEnabled(false, "platform-windows")
-                OpenModal()
             }
 
             if (getOS() == 'android') {
@@ -1867,19 +1874,19 @@
         function GetTimeEllapes(dateNum) {
             var val = Math.floor(((new Date(Date.now())) - (new Date(dateNum))) / 1000 / 60 / 60 / 24)
             if (val == 0) {
-                return "ma"
+                return "today"
             } else if (val == 1) {
-                return "tegnap"
+                return "yesterday"
             } else {
-                var suffix = " napja"
+                var suffix = " days ago"
                 const oneMonth = 30.4368499167
                 if (val >= oneMonth) {
                     val = Math.floor(val / oneMonth)
-                    suffix = " hónapja"
+                    suffix = " months ago"
                 }
                 if (Math.floor(val / oneMonth) >= 12) {
                     val = Math.floor(val / 12)
-                    suffix = " éve"
+                    suffix = " years ago"
                 }
                 return (val + suffix)
             }
