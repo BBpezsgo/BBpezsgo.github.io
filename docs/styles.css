@@ -122,19 +122,16 @@ ul.used-languages > li {
 
 .reveal.active>* {
     opacity: 1;
-    transform: translateX(0);
     transition-delay: 0ms !important;
 }
 
 .reveal {
     position: relative;
-    transform: translateY(50px) scale(.95);
     opacity: 0;
     transition: 1000ms ease;
 }
 
 .reveal.active {
-    transform: translateY(0) scale(1);
     opacity: 1;
 }
 
@@ -142,16 +139,15 @@ ul.used-languages > li {
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    box-shadow: #0002 5px 0px 3px inset;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #8d8d8d;
-    border-radius: 4px;
+    background: #fff4;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #cacaca;
+    background: #fff8;
 }
 
 ::-webkit-scrollbar-corner {
@@ -247,9 +243,6 @@ ul.used-languages > li {
 /* Header */
 .header {
     padding: 30px 0px;
-    background-image: url('./img/header.webp');
-    background-size: cover;
-    background-position: center;
     transition-duration: 100ms;
     opacity: 0;
 }
@@ -265,7 +258,10 @@ ul.used-languages > li {
 /* Containers */
 
 .container-background {
-    box-shadow: #000c 5px 5px 10px;
+    border-radius: 16px;
+    border: 1px solid #fff8;
+    background-color: #0008 !important;
+    box-shadow: #0008 0px 0px 2px;
 }
 
 /* Popover */
@@ -378,22 +374,6 @@ ul.used-languages > li {
     opacity: 1;
 }
 
-body {
-    background: linear-gradient(to bottom, #899197, #968057, #384581, #2b6194, #704024);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-body:before {
-    content: '';
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #73797e 75%);
-}
-
 .bbcode-code {
     background-color: #222;
     color: #eee;
@@ -421,4 +401,21 @@ body:before {
 
 .bbcode-code .comm {
     color: #398d28;
+}
+
+#bg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/header.webp');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+html {    
+    padding-bottom: 26px;
 }
