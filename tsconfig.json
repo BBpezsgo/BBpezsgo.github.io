@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "ES6",
+        "moduleResolution": "Classic",
+        "newLine": "CRLF",
+        "outDir": "../out/",
+        "target": "es5",
+        "sourceMap": false,
+        "jsx": "preserve",
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "strict": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": false,
+        "allowJs": true,
+        "removeComments": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

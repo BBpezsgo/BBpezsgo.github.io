@@ -1,11 +1,9 @@
-/docs/node_modules
-/docs/package.json
-/docs/package-lock.json
-/docs/sass
 /docs/trello-url.txt
 /docs/timeline.css
 /docs/timeline.html
-docs/old/
-docs/index_hu.html
-docs/tests/
+/docs/old/
+/docs/index_hu.html
+/docs/tests/
 /.vscode/
+/node_modules
+/package-lock.json

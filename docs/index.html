@@ -3,6 +3,7 @@
 
 <head>
     <title>BB - Projectek</title>
+    <base href="./" target="_blank">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2XGS00LFP"></script>
@@ -24,11 +25,10 @@
     <meta name="twitter:site" content="@discord">
     <meta name="twitter:creator" content="@User0057#0057">
 
-    <link rel="stylesheet" type="text/css" href="css/main.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/d70969805a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="icon" href="./img/icons/ico0.png" sizes="16x16">
 
     <!-- Disable context menu -->
@@ -76,11 +76,11 @@
 
         <!-- Header -->
         <div class="bg-primary text-white text-center header">
-            <h1>Bánszky Balázs</h1>
+            <h1><img src="./img/ProfilPicture.webp" style="width:1em;height:1em;border-radius:50%;">Bánszky Balázs</h1>
             <p>Projects</p>
         </div>
 
-        <!-- Navbar -->
+        <!-- Navbar
         <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top"
             style="z-index: 1; box-shadow: #000 0px 0px 10px;">
             <div class="container-fluid">
@@ -125,15 +125,18 @@
                 </div>
             </div>
         </nav>
+        -->
 
+        <!--
         <div id="main-content" class="py-5 container-fluid text-light"
             style="text-align: center; background: #899197; box-shadow: #555d63 0px 0px 5px inset;">
             <h1>Helo!</h1>
             <p style="font-size: 1.5em;">Here you can see the projects I am (or have been) working on</p>
         </div>
+        -->
 
         <!-- Main -->
-        <div class="main-content container mt-5">
+        <div id="main-content" class="main-content container">
 
             <!-- Prove Human -->
             <div id="prove-human-section" class="container bg-dark text-white py-2 mt-5 reveal container-background">
@@ -181,10 +184,7 @@
             </div>
 
             <!-- Nothing -->
-            <div id="nothing" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
-            background-image: linear-gradient(#0005,  #292621), url('./img/nothing-background.webp');
-            background-size: 256px;
-            ">
+            <div id="nothing" class="container bg-dark text-white py-2 mt-5 reveal container-background">
                 <h1><img src="./img/programs/nothing.png" class="program-icon" alt="Nothing icon">Nothing</h1>
                 <p>A strategy game.</p>
                 <div class="row">
@@ -528,11 +528,7 @@
             </div>
 
             <!-- GitHub -->
-            <div id="github" class="mt-5 container bg-dark text-white py-2 reveal container-background" style="
-            background-image: linear-gradient(#0005,  #1e1735), url(https://github.blog/wp-content/uploads/2020/12/2-2.png?resize=1024%2C613);
-            background-size:cover;
-            background-position: center;
-            ">
+            <div id="github" class="mt-5 container bg-dark text-white py-2 reveal container-background">
                 <h1><i class='fab fa-github program-icon'></i>Other projects on GitHub</h1>
                 <div class="row">
                     <div class="col-md-6" style="margin-bottom: 20px;">
@@ -613,7 +609,7 @@
                     </div>
                     <div class="col-md-6" style="margin-bottom: 20px;">
                         <h4>
-                            Python Tutorial <img src="./img-not-optimized/school.png" width="24px" height="24px" title="School project" alt="School project">
+                            Python Tutorial <img src="./img/school.png" width="24px" height="24px" title="School project" alt="School project">
                             <ul class="horizontal-list used-languages">
                                 <li>
                                     <span data-bs-toggle="tooltip" title="JavaScript">
@@ -682,7 +678,7 @@
                     </div>
                     <div class="col-md-6" style="margin-bottom: 20px;">
                         <h4>
-                            GSZI Map <img src="./img-not-optimized/school.png" width="24px" height="24px" title="School project" alt="School project">
+                            GSZI Map <img src="./img/school.png" width="24px" height="24px" title="School project" alt="School project">
                             <ul class="horizontal-list used-languages">
                                 <li>
                                     <span data-bs-toggle="tooltip" title="JavaScript">
@@ -851,11 +847,7 @@
             </div>
 
             <!-- Ultimate program -->
-            <div id="ultimateprogram" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
-            background-image: linear-gradient(#0005,  #1d2847), url(https://img.freepik.com/free-photo/digital-technology-network-data-communication-concept-abstract-background-earth-element-furnished-by-nasa_24070-631.jpg);
-            background-size:cover;
-            background-position: center;
-            ">
+            <div id="ultimateprogram" class="container bg-dark text-white py-2 mt-5 reveal container-background">
                 <h1>
                     <img src="./img/programs/network.png" class="program-icon" alt="Ultimate program icon">
                     Ultimate Program
@@ -932,11 +924,7 @@
             </div>
 
             <!-- Image slicer -->
-            <div id="imageslicer" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
-            background-image: linear-gradient(#0005,  #1a2c38), url(https://wallpaperaccess.com/full/1558939.jpg);
-            background-size:cover;
-            background-position: center;
-            ">
+            <div id="imageslicer" class="container bg-dark text-white py-2 mt-5 reveal container-background">
                 <h1>
                     <img src="./img/programs/blank.png" class="program-icon" alt="Image slicer icon">
                     Image slicer
@@ -983,10 +971,7 @@
             </div>
 
             <!-- MC packs -->
-            <div id="mcpacks" class="container bg-dark text-white py-2 mt-5 reveal container-background" style="
-            background-size: 48px;
-            background-image: linear-gradient(#0005,  #3a291c), url('./img/mc-background.png');
-            ">
+            <div id="mcpacks" class="container bg-dark text-white py-2 mt-5 reveal container-background">
                 <h1>Minecraft resource packs</h1>
                 <p>
                     I used these:
@@ -1534,8 +1519,8 @@
         function OnLoad() {
             ResetDownloadButtons()
             document.getElementsByClassName("header")[0].classList.add("header-loaded")
-            OnVisit()
-            Analyze()
+            // OnVisit()
+            // Analyze()
             // InitProveHumanModal()
             // InitProveHumanSection()
         }

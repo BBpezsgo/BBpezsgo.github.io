@@ -1,0 +1,52 @@
+/* Badge */
+
+.badge {
+    margin-left: 5px;
+}
+
+/* Icons */
+.used-program-icon {
+    width: 32px;
+    height: 32px;
+    -webkit-filter: drop-shadow(5px 5px 5px #0005);
+    filter: drop-shadow(5px 5px 5px #0005);
+    transition: transform 200ms;
+}
+
+.used-program-icon:hover {
+    transform: scale(1.1);
+}
+
+.used-program-icon:active {
+    transform: scale(.9);
+}
+
+.used-language-icon {
+    width: 1em;
+    height: 1em;
+    -webkit-filter: drop-shadow(5px 5px 5px #0005);
+    filter: drop-shadow(5px 5px 5px #0005);
+    transition: transform 200ms;
+}
+
+.used-language-icon:hover {
+    transform: scale(1.1);
+}
+
+.used-languages {
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    transform: translateY(-2px);
+}
+
+ul.used-languages > li {
+  display: inline;
+}
+
+.program-icon {
+    height: 1em;
+    margin-right: 5px;
+    position: relative;
+    top: -5px;
+}

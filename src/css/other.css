@@ -1,0 +1,58 @@
+
+/* Warning text */
+.warning-title {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(to bottom, #899197, #968057, #384581, #2b6194, #704024);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #73797e 75%);
+}
+
+.main-content > .container:before {
+    transform: skewY(-3deg);
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    right: 0;
+    bottom: 0;
+}
+
+#github.container:before {
+    background-image:
+        linear-gradient(#0005,  #1e1735),
+        url(https://github.blog/wp-content/uploads/2020/12/2-2.png?resize=1024%2C613);
+    background-size: cover;
+    background-position: center;
+}
+
+#ultimateprogram.container:before {
+    background-image:
+        linear-gradient(#0005,  #1d2847),
+        url(https://img.freepik.com/free-photo/digital-technology-network-data-communication-concept-abstract-background-earth-element-furnished-by-nasa_24070-631.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#imageslicer.container:before {
+    background-image:
+        linear-gradient(#0005,  #1a2c38),
+        url(https://wallpaperaccess.com/full/1558939.jpg);
+    background-size: cover;
+    background-position: center;
+}
