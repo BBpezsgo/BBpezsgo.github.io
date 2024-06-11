@@ -86,6 +86,7 @@ h1 {
   background-image: url("./img/clouds.webp");
   background-size: cover;
   background-position: center;
+  background-color: #a89e98;
 }
 
 .btn,

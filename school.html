@@ -98,6 +98,12 @@
                 <!-- Feb 28, 2021 -->
                 <a href="https://github.com/BBpezsgo/sulismunka.github.io">Egy weboldal a "legnagyobb dolgokról"</a>
             </p>
+            <p>
+                Megismerkedtem az Ardunio-val és az elektronika alapjaival is.
+            </p>
+            <p>
+                A front-end részéről először ekkor találkoztam a Bootstrap-al, további jártasságokat szereztem.
+            </p>
         </div>
 
         <div class="container reveal">
@@ -132,6 +138,13 @@
             <p>
                 <!-- May 19, 2022 -->
                 <a href="https://github.com/BBpezsgo/BBAboutGoogle.github.io">Egy weboldal a Google-ről</a>
+            </p>
+            <p>
+                Megtanultam alap SQL lekérdezéseket írni, és SQL adatbázisokat, táblákat illetve adatokat kezelni.
+            </p>
+            <p>
+                Ebben az évben IT alapokból rengeteget tanultam: OSI model, kábeltípusok, routerek és switchek működése,
+                szállítási réteg protokolljai, router konfiguráció.
             </p>
             
             <h2>Versenyek</h2>
@@ -206,6 +219,10 @@
                     Írtam egy <a href="https://github.com/BBpezsgo/PHP-MySQL-Sample">séma projectet PHP és MySQL-t használva</a>, mert volt olyan csoport aki ebben akarta írni, gondoltam jól jöhet nekik.
                 </p>
             </p>
+            <p>
+                Ebben az évben a multimédia ismereteim is bővültek: megtanultam a hang működését és
+                videóanyag vágás technikáit.
+            </p>
             
             <h2>Versenyek</h2>
             <p>
@@ -264,6 +281,13 @@
             <p>
                 Egy YouTube tutorial segítségével elkezdtem írni egy <a href="https://github.com/BBpezsgo/OS">operációs rendszert</a>, de végül abbahagytam.
             </p>
+            <!-- ? -->
+            <p>
+                Mivel nincsenek barátaim akivel tudnék játszani Minecraftot, írtam
+                egy <a href="https://github.com/BBpezsgo/Bruh-MC-Bot">botot</a> akivel tudok.
+                Egy másik Minecraft projectem az egy <a href="https://github.com/BBpezsgo/Minecraft-Resource-Pack-Converter">resource pack converter</a>
+                ami különböző verzióból másikba át tudja konvertálni a resource packeket oda-vissza.
+            </p>
 
             <h2>Iskolai projectek</h2>
             <p>
@@ -286,6 +310,7 @@
                     Természetesen én is megcsináltam a feladatot, és így készült el
                     <a href="https://github.com/BBpezsgo/YeahGame">ez a többjátékos, lövöldözős játék</a>.
                     <a href="https://bbpezsgo.github.io/YeahGameWeb/">Működik a webböngészőben is</a>.
+                    Tovább bővítettem a felfogásomat a hálózati kommunikáció lehetőségeiről C#-ban.
                 </p>
             </p>
             <!-- Jan 5, 2024 -->
@@ -297,19 +322,32 @@
         </div>
 
         <div class="container reveal">
+            <h1>Iskolai évek</h1>
+
+            <p>
+                Úgy érzem, autodidakta módon gyorsabban tudok programozást tanulni.
+                Az iskola számomra arra volt jó, hogy a hiányosságokat befoltozzam és
+                egy szilárdabb, teljesebb ismeretem legyen. Továbbá más
+                technológiákkal is megismerkedtem, amiket itthon később tanultam volna meg,
+                vagy elő se vettem volna.
+            </p>
+        </div>
+
+        <div class="container reveal">
             <h1>Jövő</h1>
 
             <p>
                 A jövőben meg akarom írni a 8086 és x86 emulátort, illetve a hozzájuk tartozó compilereket is.
-            </p>
-            <p>
                 Szeretnék több React.js alkalmazást is írni, mert nekem tetszik a framework.
-            </p>
-            <p>
                 Jelenleg egy Discord bot frontend-et írok, ezt is be akarom fejezni.
+                Érdekelnek a low-level dolgok is, driverek és operációs rendszer írásba bele szeretnék majd kezdeni.
+                Még át kell gondoljam hogy linuxra váltsak-e, de ha igen akkor az arch linuxot fogom választani.
             </p>
             <p>
-                Még át kell gondoljam hogy linuxra váltsak-e, de ha igen akkor az arch linuxot fogom választani.
+                Sikeres érettségi esetén lehetőségem lehet az egyetemre, ebben az esetben a
+                Szegedi egyetemet szemeltem ki. Egy jó szoftverfejlesztő állást követően Nyugatra akarok költözni:
+                Németország, vagy Amerika, ez még kiderül. Reményeim szerint öltönyös ember leszek, otthon pedig lesz
+                mogyoróvaj.
             </p>
         </div>
     </div>
@@ -350,7 +388,16 @@
 
     <script>
         (function() {
-            /** @type {Array<{ element: HTMLElement; x: number; y: number; vx: number; vy: number; born: number; }>} */
+            /** @type {Array<{
+             * element: HTMLElement;
+             * x: number; vx: number;
+             * y: number; vy: number;
+             * born: number;
+             * rx: number; rvx: number;
+             * ry: number; rvy: number;
+             * rz: number; rvz: number;
+             * scale: number;
+             * }>} */
             const confetties = [ ]
             /** @type {number | null} */
             let confettiesInterval = null
@@ -391,9 +438,13 @@
                     }
                     confetty.x += confetty.vx * delta
                     confetty.y += confetty.vy * delta
+                    confetty.rx += confetty.rvx * delta
+                    confetty.ry += confetty.rvy * delta
+                    confetty.rz += confetty.rvz * delta
                     confetty.vy += 400 * delta
                     confetty.element.style.left = `${confetty.x}px`
                     confetty.element.style.top = `${confetty.y}px`
+                    confetty.element.style.transform = `rotateX(${confetty.rx}deg) rotateY(${confetty.ry}deg) rotateZ(${confetty.rz}deg) scale(${confetty.scale})`
                 }
             }
 
@@ -408,8 +459,14 @@
                         vx: (Math.random() - .5) * 500,
                         vy: (Math.random() - .5) * 500,
                         born: Date.now() + (Math.random() * 500),
+                        rx: Math.random() * 360,
+                        ry: Math.random() * 360,
+                        rz: Math.random() * 360,
+                        scale: 0.5 + (Math.random() * .5),
+                        rvx: (Math.random() - .5) * 700,
+                        rvy: (Math.random() - .5) * 700,
+                        rvz: (Math.random() - .5) * 700,
                     })
-                    newConfetty.style.transform = `rotateX(${Math.random() * 360}deg) rotateY(${Math.random() * 360}deg) rotateZ(${Math.random() * 360}deg) scale(${0.7 + (Math.random() * .3)})`
                     newConfetty.style.backgroundColor = confettyColors[Math.floor(Math.random() * confettyColors.length)]
                     document.body.appendChild(newConfetty)
                 }
